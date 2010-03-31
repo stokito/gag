@@ -1,14 +1,21 @@
-To use the Google Annotations Gallery, download the gag-<version>.zip file from http://code.google.com/p/gag/ and unzip.
+To use the Google Annotations Gallery, download the gag-<version>.zip file
+from http://code.google.com/p/gag/ and unzip.
 
-You can find the annotations and supporting enumerations in gag.jar. If you want to enforce the enforceable annotations, you can find the dynamic bytecode instrumentation Java agent in gag-agent.jar.
+You can find the annotations and supporting enumerations in gag.jar. If you
+want to enforce the enforceable annotations, you can find the dynamic bytecode
+instrumentation Java agent in gag-agent.jar.
 
-To use the annotations, simply annotate your code with them and include gag.jar in your classpath.
+To use the annotations, simply annotate your code with them and include
+gag.jar in your classpath.
 
-To use the Java agent: use at least JDK 5; use the -javaagent:gag-agent.jar option; and put the agent-dependent jars in your classpath, like:
+To use the Java agent: use at least JDK 5; use the -javaagent:gag-agent.jar
+option; and put the agent-dependent jars in your classpath, like:
 
-java -javaagent:gag-agent.jar -cp asm-3.1.jar:asm-commons-3.1.jar:google-collect-1.0.jar:gag.jar MyAnnotatedClass
+  java -javaagent:gag-agent.jar \
+    -cp asm-3.1.jar:asm-commons-3.1.jar:google-collect-1.0.jar:gag.jar \
+    MyAnnotatedClass
 
 A demo can be run from ant by doing:
 
-ant run-demo
+  ant run-demo
 
