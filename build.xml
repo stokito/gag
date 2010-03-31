@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+
+<project name="gag" default="current" basedir=".">
+
+  <property file="build.properties"/>
+
+  <path id="agent-classpath">
+    <fileset dir="${lib.dir}/agent">
+      <include name="asm-3.1.jar"/>
+      <include name="asm-commons-3.1.jar"/>
+      <include name="google-collect-1.0.jar"/>
+    </fileset>
+  </path>
+
+  <path id="test-classpath">
+    <fileset dir="${lib.dir}/test">
+      <include name="junit.jar"/>
+    </fileset>
+  </path>
+
+  <target name="clean-all">
+    <delete dir="${build.dir}" quiet="true"/>
+  </target>
+
+  <target name="compile-gag"
+        description="Compile the annotations classes">
+    <mkdir dir="${build.dir}/classes/gag"/>
+    <javac
+        srcdir="${src.dir}"
+        destdir="${build.dir}/classes/gag"
+        sourcepath=""
+        includes="com/google/gag/annotation/**/*.java com/google/gag/enumeration/**/*.java"
+        debug="true"
+        deprecation="on"
+        includeantruntime="false"/>
+  </target>
+
+  <target name="jar-gag"
+        depends="compile-gag"
+        description="Build the annotations jar">
+    <delete file="${build.dir}/gag.jar" quiet="true"/>
+    <jar
+        jarfile="${build.dir}/gag.jar"
+        basedir="${build.dir}/classes/gag"
+        includes="**/*.class"/>
+  </target>
+
+  <target name="compile-agent"
+        depends="compile-gag"
+        description="Compile the agent classes">
+    <mkdir dir="${build.dir}/classes/gag-agent"/>
+    <javac
+        srcdir="${src.dir}"
+        destdir="${build.dir}/classes/gag-agent"
+        sourcepath=""
+        includes="com/google/gag/instrument/**/*.java com/google/gag/agent/**/*.java"
+        debug="true"
+        deprecation="on"
+        includeantruntime="false">
+      <classpath>
+        <path refid="agent-classpath"/>
+        <pathelement location="${build.dir}/classes/gag"/>
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="jar-agent"
+      depends="compile-agent"
+      description="Build the agent jar">
+    <delete file="${build.dir}/gag-agent.jar" quiet="true"/>
+    <jar
+        jarfile="${build.dir}/gag-agent.jar"
+        basedir="${build.dir}/classes/gag-agent"
+        includes="**/*.class">
+      <manifest>
+        <attribute name="Premain-Class" value="com.google.gag.agent.GagTransformer"/>
+        <attribute name="Class-Path" value="asm-3.1.jar asm-commons-3.1.jar google-collect-1.0.jar"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="javadoc"
+        description="Generate Javadocs">
+    <mkdir dir="${build.dir}/javadoc"/>
+    <javadoc packagenames="${javadoc.packagenames}"
+        destdir="${build.dir}/javadoc"
+        author="false"
+        protected="true"
+        windowtitle="Google Annotations Gallery ${version}">
+      <sourcepath>
+        <pathelement location="${src.dir}"/>
+        <pathelement location="${demo.dir}"/>
+      </sourcepath>
+      <classpath refid="agent-classpath"/>
+    </javadoc> 
+  </target>
+
+  <target name="dist"
+        depends="jar-gag, jar-agent, javadoc"
+        description="Build distribution zip file">
+    <mkdir dir="${build.dir}/dist"/>
+    <mkdir dir="${build.dir}/dist/demo"/>
+    <mkdir dir="${build.dir}/dist/src"/>
+    <mkdir dir="${build.dir}/dist/test"/>
+    <copy toDir="${build.dir}/dist" file="build.properties"/>
+    <copy toDir="${build.dir}/dist" file="build.xml"/>
+    <copy toDir="${build.dir}/dist" file="README"/>
+    <copy toDir="${build.dir}/dist">
+      <fileset dir="${build.dir}" includes="*.jar"/>
+    </copy>
+    <copy toDir="${build.dir}/dist"> 
+      <fileset dir="${build.dir}" includes="javadoc/**/*"/>
+    </copy>
+    <copy toDir="${build.dir}/dist/demo"> 
+      <fileset dir="${demo.dir}"/>
+    </copy>
+    <copy toDir="${build.dir}/dist/src"> 
+      <fileset dir="${src.dir}" includes="**/*"/>
+    </copy>
+    <copy toDir="${build.dir}/dist/test"> 
+      <fileset dir="${test.dir}" includes="**/*"/>
+    </copy>
+    <zip destfile="${build.dir}/gag-${version}.zip">
+      <zipfileset dir="${build.dir}/dist"/>
+    </zip>
+  </target>
+  
+  <target name="compile-demo"
+        depends="compile-gag"
+        description="Compile the demo classes">
+    <mkdir dir="${build.dir}/classes/demo"/>
+    <javac
+        srcdir="${demo.dir}"
+        debug="true"
+        destdir="${build.dir}/classes/demo"
+        includes="**/*.java"
+        deprecation="on"
+        includeantruntime="false">
+      <classpath>
+        <pathelement location="${build.dir}/classes/gag"/>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="compile-test"
+        depends="compile-gag"
+        description="Compile the test classes">
+    <mkdir dir="${build.dir}/classes/test"/>
+    <javac
+        srcdir="${test.dir}"
+        debug="true"
+        destdir="${build.dir}/classes/test"
+        includes="**/*.java"
+        deprecation="on"
+        includeantruntime="false">
+      <classpath>
+        <pathelement location="${build.dir}/classes/gag"/>
+        <path refid="test-classpath"/>
+      </classpath>
+    </javac>
+  </target>
+
+  
+  <target name="run-demo"
+        depends="compile-demo, jar-agent"
+        description="Run the demo">
+    <java
+        fork="true"
+        classname="com.google.gag.demo.RunDemo"
+        taskname="demo">
+      <jvmarg value="-javaagent:${build.dir}/gag-agent.jar"/>
+      <classpath>
+        <pathelement location="${build.dir}/classes/demo"/>
+        <pathelement location="${build.dir}/classes/gag"/>
+        <path refid="agent-classpath"/>
+      </classpath>
+    </java>
+  </target>
+
+  <target name="run-test"
+        depends="compile-test,jar-agent"
+        description="Run the tests">
+    <junit fork="yes" printsummary="yes" haltonfailure="no">
+      <jvmarg value="-javaagent:${build.dir}/gag-agent.jar"/>
+      <classpath>
+	<pathelement location="${build.dir}/classes/gag"/>
+        <pathelement location="${build.dir}/classes/test"/>
+        <path refid="test-classpath"/>
+        <path refid="agent-classpath"/>
+      </classpath>
+      <formatter type="plain" usefile="false"/>
+      <test name="com.google.gag.AllTests"/>
+    </junit>
+  </target>
+  
+</project>
