@@ -45,6 +45,18 @@
         includes="**/*.class"/>
   </target>
 
+  <target name="jar-gag-src"
+      depends="compile-gag"
+      description="Build the annotation jar with source">
+    <delete file="${build.dir}/gag-src.jar" quiet="true"/>
+    <jar jarfile="${build.dir}/gag-src.jar">
+        <fileset dir="${build.dir}/classes/gag"/>
+        <fileset
+            dir="${src.dir}"
+            includes="com/google/gag/annotation/**/*.java com/google/gag/enumeration/**/*.java"/>
+    </jar>
+  </target>
+
   <target name="compile-agent"
         depends="compile-gag"
         description="Compile the agent classes">
@@ -100,10 +112,12 @@
         description="Build distribution zip file">
     <mkdir dir="${build.dir}/dist"/>
     <mkdir dir="${build.dir}/dist/demo"/>
+    <mkdir dir="${build.dir}/dist/lib"/>
     <mkdir dir="${build.dir}/dist/src"/>
     <mkdir dir="${build.dir}/dist/test"/>
     <copy toDir="${build.dir}/dist" file="build.properties"/>
     <copy toDir="${build.dir}/dist" file="build.xml"/>
+    <copy toDir="${build.dir}/dist" file="COPYING"/>
     <copy toDir="${build.dir}/dist" file="README"/>
     <copy toDir="${build.dir}/dist">
       <fileset dir="${build.dir}" includes="*.jar"/>
@@ -113,6 +127,9 @@
     </copy>
     <copy toDir="${build.dir}/dist/demo"> 
       <fileset dir="${demo.dir}"/>
+    </copy>
+    <copy toDir="${build.dir}/dist/lib"> 
+      <fileset dir="${lib.dir}"/>
     </copy>
     <copy toDir="${build.dir}/dist/src"> 
       <fileset dir="${src.dir}" includes="**/*"/>
