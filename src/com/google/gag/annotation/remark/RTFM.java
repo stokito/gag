@@ -14,19 +14,28 @@
  * limitations under the License.
  */
 
-package com.google.gag.annotation.literary;
+package com.google.gag.annotation.remark;
 
+import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.enumeration.Feet;
-import com.google.gag.enumeration.Measure;
+import com.google.gag.annotation.team.Visionary;
 
 /**
- * Indicates that the annotated code follows the specified poetic meter.
+ * Indicates that the author of the annotated code is strongly encouraged to
+ * read the manual at the specified URL. For example:
+ * 
+ * <pre>
+ *   &#064;RTFM("http://java.sun.com/javase/6/docs/api/java/lang/String.html")
+ *   private static String stripPeriods(String s) {
+ *     return s.replaceAll(".", "");
+ *   }
+ * </pre>
  */
-@Retention(RetentionPolicy.SOURCE)
-public @interface Meter {
-  Feet feet();
-  Measure measure() default Measure.UNSPECIFIED;
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Visionary("andy.tokarev")
+public @interface RTFM {
+  String value() default "";
 }

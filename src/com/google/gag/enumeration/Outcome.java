@@ -14,19 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.gag.annotation.literary;
+package com.google.gag.enumeration;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-
-import com.google.gag.enumeration.Feet;
-import com.google.gag.enumeration.Measure;
+import com.google.gag.annotation.team.Visionary;
 
 /**
- * Indicates that the annotated code follows the specified poetic meter.
+ * Outcome types.
  */
-@Retention(RetentionPolicy.SOURCE)
-public @interface Meter {
-  Feet feet();
-  Measure measure() default Measure.UNSPECIFIED;
+@Visionary("Hanneli")
+public enum Outcome {
+	EPIC,
+	IMPROVISATIONAL,
+	INCONCEIVABLE,
+	IRONIC
 }

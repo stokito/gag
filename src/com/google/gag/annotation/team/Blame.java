@@ -14,11 +14,27 @@
  * limitations under the License.
  */
 
-package com.google.gag.annotation.literary;
+package com.google.gag.annotation.team;
 
+import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-@Retention(RetentionPolicy.SOURCE)
-public @interface Haiku {
+/**
+ * Indicates that the annotated code is the fault of the specified individual.
+ * Can also optionally specify the reason for the blame. For example:
+ * 
+ * <pre>
+ *   &#064;Blame(
+ *       person = "Marvin",
+ *       reason = "for checking in such lameness")
+ *   public void doRandomThreadSleep() {
+ * </pre>
+ */
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Visionary("zaniyah")
+public @interface Blame {
+  String person();
+  String reason() default "";
 }

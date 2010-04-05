@@ -14,19 +14,21 @@
  * limitations under the License.
  */
 
-package com.google.gag.annotation.literary;
+package com.google.gag.annotation.disclaimer;
 
+import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.enumeration.Feet;
-import com.google.gag.enumeration.Measure;
+import com.google.gag.annotation.team.Visionary;
 
 /**
- * Indicates that the annotated code follows the specified poetic meter.
+ * Warning that the annotated code is the result of the specified awesome
+ * individual.
  */
-@Retention(RetentionPolicy.SOURCE)
-public @interface Meter {
-  Feet feet();
-  Measure measure() default Measure.UNSPECIFIED;
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Visionary("cretz")
+public @interface IAmAwesome {
+  String value() default "";
 }

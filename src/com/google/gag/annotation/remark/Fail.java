@@ -14,19 +14,26 @@
  * limitations under the License.
  */
 
-package com.google.gag.annotation.literary;
+package com.google.gag.annotation.remark;
 
+import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.enumeration.Feet;
-import com.google.gag.enumeration.Measure;
+import com.google.gag.annotation.team.Visionary;
+import com.google.gag.enumeration.Outcome;
 
 /**
- * Indicates that the annotated code follows the specified poetic meter.
+ * Indicates that the annotated code is fail. For example:
+ * 
+ * <pre>
+ *   &#064;Fail(Outcome.EPIC)
+ *   public class AlphabetPatent {
+ * </pre>
  */
-@Retention(RetentionPolicy.SOURCE)
-public @interface Meter {
-  Feet feet();
-  Measure measure() default Measure.UNSPECIFIED;
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Visionary("Hanneli")
+public @interface Fail {
+	Outcome value() default Outcome.EPIC;
 }

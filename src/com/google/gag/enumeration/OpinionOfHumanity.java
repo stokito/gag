@@ -14,19 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.gag.annotation.literary;
+package com.google.gag.enumeration;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-
-import com.google.gag.enumeration.Feet;
-import com.google.gag.enumeration.Measure;
+import com.google.gag.annotation.team.Visionary;
 
 /**
- * Indicates that the annotated code follows the specified poetic meter.
+ * Opinions about humanity.
  */
-@Retention(RetentionPolicy.SOURCE)
-public @interface Meter {
-  Feet feet();
-  Measure measure() default Measure.UNSPECIFIED;
+@Visionary("Mike Samuel")
+public enum OpinionOfHumanity {
+  BENEVOLENT,
+  CAN_BE_PLACATED_WITH_CAFFEINE,
+  COMMITTED_TO_THE_EVENTUAL_DESTRUCTION_OF,
+  INDIFFERENT,
+  UNDISCLOSED
 }

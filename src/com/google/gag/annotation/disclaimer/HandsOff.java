@@ -14,19 +14,30 @@
  * limitations under the License.
  */
 
-package com.google.gag.annotation.literary;
+package com.google.gag.annotation.disclaimer;
 
+import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.enumeration.Feet;
-import com.google.gag.enumeration.Measure;
+import com.google.gag.annotation.team.Visionary;
+import com.google.gag.enumeration.Consequence;
 
 /**
- * Indicates that the annotated code follows the specified poetic meter.
+ * Indicates that the annotated code should not be modified without consulting
+ * the specified person. For example:
+ * 
+ * <pre>
+ *   &#064;HandsOff(
+ *       byOrderOf = "Jules Winnfield",
+ *       onPainOf = Consequence.ICE_COLD_STARE)
+ *   public class MysteriousBriefcase { 
+ * </pre>
  */
-@Retention(RetentionPolicy.SOURCE)
-public @interface Meter {
-  Feet feet();
-  Measure measure() default Measure.UNSPECIFIED;
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Visionary("Paul Cowan")
+public @interface HandsOff {
+  String byOrderOf();
+  Consequence onPainOf();
 }
