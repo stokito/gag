@@ -4,6 +4,7 @@ com.google.gag.annotation.enforceable
 com.google.gag.annotation.literary
 com.google.gag.annotation.literary.verse
 com.google.gag.annotation.remark
+com.google.gag.annotation.team
 com.google.gag.enumeration
 com.google.gag.instrument
 com.google.gag.instrument.collector
