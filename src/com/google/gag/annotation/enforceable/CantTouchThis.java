@@ -46,7 +46,7 @@ import com.google.gag.enumeration.Stop;
  */
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.METHOD)
-@Visionary("Jšrn Zaefferer")
+@Visionary("J&#246;rn Zaefferer")
 public @interface CantTouchThis {
   Stop value();
 }

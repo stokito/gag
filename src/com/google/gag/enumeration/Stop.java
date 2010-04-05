@@ -21,7 +21,7 @@ import com.google.gag.annotation.team.Visionary;
 /**
  * Reasons to stop.
  */
-@Visionary("Jšrn Zaefferer")
+@Visionary("J&#246;rn Zaefferer")
 public enum Stop {
   HAMMERTIME
 }
