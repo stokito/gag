@@ -18,8 +18,12 @@
     </fileset>
   </path>
 
-  <target name="clean-all">
+  <target name="clean-build">
     <delete dir="${build.dir}" quiet="true"/>
+  </target>
+
+  <target name="clean-javadoc">
+    <delete dir="javadoc" quiet="true"/>
   </target>
 
   <target name="compile-gag"
