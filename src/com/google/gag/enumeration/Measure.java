@@ -21,7 +21,7 @@ import com.google.gag.annotation.team.Visionary;
 /**
  * Measures of a poetic meter.
  */
-@Visionary("Peter Cowan")
+@Visionary("Paul Cowan")
 public enum Measure {
 	MONOMETER,
 	DIMETER,

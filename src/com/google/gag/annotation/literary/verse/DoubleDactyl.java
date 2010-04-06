@@ -22,9 +22,26 @@ import java.lang.annotation.RetentionPolicy;
 import com.google.gag.annotation.team.Visionary;
 
 /**
- * Indicates that the annotated code is a double dactyl.
+ * Indicates that the annotated code is a double dactyl. For example:
+ *
+ * <pre>
+ *   &#064;DoubleDactyl
+ *   public void createNewTractor() {
+ *
+ *     tractoryFactory
+ *         .tractorConfigurer()
+ *         .setTractorPaintjob(
+ *             A_BRIGHT_SHINY_RED);
+ *
+ *     saveTheNewTractor(
+ *         AUTOTRANSACTIONALLY);
+ *     driveTheNewTractorIn(
+ *         new WorkerThread());
+ *
+ *   }
+ * </pre>
  */
 @Retention(RetentionPolicy.SOURCE)
-@Visionary("Peter Cowan")
+@Visionary("Paul Cowan")
 public @interface DoubleDactyl {
 }

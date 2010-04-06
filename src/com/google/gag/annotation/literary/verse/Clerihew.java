@@ -25,6 +25,6 @@ import com.google.gag.annotation.team.Visionary;
  * Indicates that the annotated code is a clerihew.
  */
 @Retention(RetentionPolicy.SOURCE)
-@Visionary("Peter Cowan")
+@Visionary("Paul Cowan")
 public @interface Clerihew {
 }

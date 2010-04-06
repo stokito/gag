@@ -27,15 +27,17 @@ import com.google.gag.annotation.team.Visionary;
  * <pre>
  *   &#064;Limerick
  *   void scoreResult() {
+ *
  *     SearchResult whatIFound = hit;
  *     whatIFound.adjustForBestFit();
  *     whatIFound.setScore(
  *         new SearchScore(94));
  *     searchTransaction.safelyCommit();
+ *
  *   } 
  * </pre>
  */
 @Retention(RetentionPolicy.SOURCE)
-@Visionary("Peter Cowan")
+@Visionary("Paul Cowan")
 public @interface Limerick {
 }

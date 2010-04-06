@@ -22,9 +22,24 @@ import java.lang.annotation.RetentionPolicy;
 import com.google.gag.annotation.team.Visionary;
 
 /**
- * Indicates that the annotated code is a Burma-Shave jingle.
+ * Indicates that the annotated code is a Burma-Shave jingle. For example:
+ *
+ * <pre>
+ *   &#064;BurmaShave
+ *   public void handleError() {
+ *
+ *     if (jobIsDead()
+ *         || connIsDropped()) {
+ *
+ *       logAWarning();
+ *       thread.stop();
+ *       // Burma Shave.
+ *
+ *     }
+ *   }
+ * </pre>
  */
 @Retention(RetentionPolicy.SOURCE)
-@Visionary("Peter Cowan")
+@Visionary("Paul Cowan")
 public @interface BurmaShave {
 }
