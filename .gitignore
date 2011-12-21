@@ -1,0 +1,21 @@
+# Compiled source
+*.class
+# Log files
+*.log
+
+# Project specific
+target
+.idea
+*.ids
+*.ipr
+*.iml
+
+# Local properties
+*-local.properties
+
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
