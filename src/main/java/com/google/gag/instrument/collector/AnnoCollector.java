@@ -48,7 +48,7 @@ public class AnnoCollector implements AnnotationVisitor {
   @Override
   public AnnotationVisitor visitArray(String name) {
     // TODO: Support arrays annotations.
-    throw new UnsupportedOperationException();
+    return null;
   }
 
   @Override

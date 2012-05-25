@@ -29,7 +29,7 @@ public abstract class BaseMethodCollector implements MethodVisitor {
 
   @Override
   public AnnotationVisitor visitAnnotationDefault() {
-    throw new UnsupportedOperationException();
+     return null;
   }
 
   @Override
