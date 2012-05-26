@@ -16,33 +16,29 @@
 
 package com.google.gag.demo;
 
-import com.google.gag.annotation.enforceable.AnswerToTheUltimateQuestionOfLifeTheUniverseAndEverything;
-import com.google.gag.annotation.enforceable.Noop;
-import com.google.gag.annotation.enforceable.Roulette;
-import com.google.gag.annotation.enforceable.ThisHadBetterBe;
-import com.google.gag.annotation.enforceable.ThisHadBetterNotBe;
+import com.google.gag.annotation.enforceable.*;
 import com.google.gag.enumeration.Property;
 
 public class Demo {
 
-  public boolean acceptOnlyNull(@ThisHadBetterBe(Property.NULL) Object o) {
-    return o == null;
-  }
+    public boolean acceptOnlyNull(@ThisHadBetterBe(Property.NULL) Object o) {
+        return o == null;
+    }
 
-  public double sqrt(@ThisHadBetterNotBe(Property.NEGATIVE) double x) {
-    return Math.sqrt(x);
-  }
+    public double sqrt(@ThisHadBetterNotBe(Property.NEGATIVE) double x) {
+        return Math.sqrt(x);
+    }
 
-  @Noop
-  public String echo(String message) {
-    return message;
-  }
+    @Noop
+    public String echo(String message) {
+        return message;
+    }
 
-  public String shoutAnswer(@AnswerToTheUltimateQuestionOfLifeTheUniverseAndEverything int answer) {
-    return "The answer is " + answer + "!!";
-  }
+    public String shoutAnswer(@AnswerToTheUltimateQuestionOfLifeTheUniverseAndEverything int answer) {
+        return "The answer is " + answer + "!!";
+    }
 
-  @Roulette(probability=0.999, message="This exception courtesy of Roulette")
-  public void doSeeminglyNothing() {
-  }
+    @Roulette(probability = 0.999, message = "This exception courtesy of Roulette")
+    public void doSeeminglyNothing() {
+    }
 }

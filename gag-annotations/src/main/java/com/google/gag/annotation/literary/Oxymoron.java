@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
  * <pre>
  * &#064;Oxymoron
  *    public interface DisassemblerFactory {
-      Disassembler createDisassembler();
+ * Disassembler createDisassembler();
  * }
  * </pre>
  */

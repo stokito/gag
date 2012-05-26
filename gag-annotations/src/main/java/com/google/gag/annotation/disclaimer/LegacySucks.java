@@ -16,11 +16,11 @@
 
 package com.google.gag.annotation.disclaimer;
 
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import com.google.gag.annotation.team.Visionary;
 
 /**
  * Indicates that the annotated code is the result of having to work with
@@ -30,5 +30,5 @@ import com.google.gag.annotation.team.Visionary;
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("cretz")
 public @interface LegacySucks {
-  String value() default "";
+    String value() default "";
 }

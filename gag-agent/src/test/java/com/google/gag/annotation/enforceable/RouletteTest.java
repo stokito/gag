@@ -21,19 +21,17 @@ import junit.framework.TestCase;
 
 public class RouletteTest extends TestCase {
 
-  private RouletteTestClass testClass = new RouletteTestClass();
+    private RouletteTestClass testClass = new RouletteTestClass();
 
-  /**
-   * This is a flaky test. It's expected to not pass with probability (0.75)^20.
-   */
-  public void testRoulette() {
-    try {
-      for (int i = 0; i < 20; i++) {
-        testClass.doesNothing();
-      }
-      Assert.fail();
-    } catch (IllegalStateException e) {
-      Assert.assertEquals("Something bogus just happened", e.getMessage());
+    /** This is a flaky test. It's expected to not pass with probability (0.75)^20. */
+    public void testRoulette() {
+        try {
+            for (int i = 0; i < 20; i++) {
+                testClass.doesNothing();
+            }
+            Assert.fail();
+        } catch (IllegalStateException e) {
+            Assert.assertEquals("Something bogus just happened", e.getMessage());
+        }
     }
-  }
 }

@@ -18,30 +18,30 @@ package com.google.gag.demo;
 
 public class RunDemo {
 
-  public static void main(String[] args) {
-    Demo demo = new Demo();
+    public static void main(String[] args) {
+        Demo demo = new Demo();
 
-    System.out.println("demo.srqt(4.0) = " + demo.sqrt(4.0));
-    System.out.println("demo.srqt(0.0) = " + demo.sqrt(0.0));
-    System.out.print("demo.srqt(-1.0) = ");
-    try {
-      System.out.println(demo.sqrt(-1.0));
-    } catch (Exception e) {
-      System.out.println();
-      e.printStackTrace();
+        System.out.println("demo.srqt(4.0) = " + demo.sqrt(4.0));
+        System.out.println("demo.srqt(0.0) = " + demo.sqrt(0.0));
+        System.out.print("demo.srqt(-1.0) = ");
+        try {
+            System.out.println(demo.sqrt(-1.0));
+        } catch (Exception e) {
+            System.out.println();
+            e.printStackTrace();
+        }
+
+        System.out.println("demo.acceptOnlyNull(null) = " + demo.acceptOnlyNull(null));
+        System.out.print("demo.acceptOnlyNull(new Object()) = ");
+        try {
+            System.out.println(demo.acceptOnlyNull(new Object()));
+        } catch (Exception e) {
+            System.out.println();
+            e.printStackTrace();
+        }
+
+        System.out.println("demo.echo(\"woot\") = " + demo.echo("woot"));
+
+        System.out.println("demo.shoutAnswer(6 * 9) = " + demo.shoutAnswer(6 * 9));
     }
-
-    System.out.println("demo.acceptOnlyNull(null) = " + demo.acceptOnlyNull(null));
-    System.out.print("demo.acceptOnlyNull(new Object()) = ");
-    try {
-      System.out.println(demo.acceptOnlyNull(new Object()));
-    } catch (Exception e) {
-      System.out.println();
-      e.printStackTrace();
-    }
-
-    System.out.println("demo.echo(\"woot\") = " + demo.echo("woot"));
-
-    System.out.println("demo.shoutAnswer(6 * 9) = " + demo.shoutAnswer(6 * 9));
-  }
 }

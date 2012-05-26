@@ -16,12 +16,12 @@
 
 package com.google.gag.annotation.disclaimer;
 
+import com.google.gag.enumeration.RegionType;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import com.google.gag.enumeration.RegionType;
 
 /**
  * Discloses the best-guess number of regions that the annotated code might
@@ -39,6 +39,7 @@ import com.google.gag.enumeration.RegionType;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 public @interface ProbablyIllegalIn {
-  int number();
-  RegionType region();
+    int number();
+
+    RegionType region();
 }

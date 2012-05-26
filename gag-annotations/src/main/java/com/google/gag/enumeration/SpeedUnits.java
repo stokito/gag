@@ -16,12 +16,10 @@
 
 package com.google.gag.enumeration;
 
-/**
- * Units of speed.
- */
+/** Units of speed. */
 public enum SpeedUnits {
-  ATTOPARSECS_PER_MICROFORTNIGHT,
-  SMOOTS_PER_MICROCENTURY,
-  SHEPPEYS_PER_BLINK,
-  TWIPS_PER_JIFFY
+    ATTOPARSECS_PER_MICROFORTNIGHT,
+    SMOOTS_PER_MICROCENTURY,
+    SHEPPEYS_PER_BLINK,
+    TWIPS_PER_JIFFY
 }

@@ -16,25 +16,25 @@
 
 package com.google.gag.annotation.disclaimer;
 
+import com.google.gag.annotation.team.Visionary;
+import com.google.gag.enumeration.Where;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-import com.google.gag.enumeration.Where;
-
 /**
  * Indicates that the annotated code was the result of a flash of
  * inspiration. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;AhaMoment(Where.TRAFFIC_JAM)
- *   public int perfectHash(Object o) { 
+ *   public int perfectHash(Object o) {
  * </pre>
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("Paul Cowan")
 public @interface AhaMoment {
-  Where value();
+    Where value();
 }

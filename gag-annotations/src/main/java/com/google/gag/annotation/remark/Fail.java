@@ -16,16 +16,16 @@
 
 package com.google.gag.annotation.remark;
 
+import com.google.gag.annotation.team.Visionary;
+import com.google.gag.enumeration.Outcome;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-import com.google.gag.enumeration.Outcome;
-
 /**
  * Indicates that the annotated code is fail. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;Fail(Outcome.EPIC)
  *   public class AlphabetPatent {
@@ -35,5 +35,5 @@ import com.google.gag.enumeration.Outcome;
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("Hanneli")
 public @interface Fail {
-	Outcome value() default Outcome.EPIC;
+    Outcome value() default Outcome.EPIC;
 }

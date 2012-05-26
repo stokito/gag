@@ -29,10 +29,10 @@ import java.lang.annotation.RetentionPolicy;
  *     molly.activateNerdVoice();
  *     tom.expatiateOratorically();
  * }
- </pre>
+ * </pre>
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ShoutOutTo {
-  String[] value();
+    String[] value();
 }

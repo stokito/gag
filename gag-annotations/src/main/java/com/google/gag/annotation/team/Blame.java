@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * Indicates that the annotated code is the fault of the specified individual.
  * Can also optionally specify the reason for the blame. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;Blame(
  *       person = "Marvin",
@@ -35,6 +35,7 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("zaniyah")
 public @interface Blame {
-  String person();
-  String reason() default "";
+    String person();
+
+    String reason() default "";
 }

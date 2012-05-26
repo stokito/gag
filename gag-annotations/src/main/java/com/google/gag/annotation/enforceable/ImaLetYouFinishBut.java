@@ -16,32 +16,32 @@
 
 package com.google.gag.annotation.enforceable;
 
+import com.google.gag.annotation.team.HonorableMention;
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.google.gag.annotation.team.HonorableMention;
-import com.google.gag.annotation.team.Visionary;
-
 /**
  * Causes the annotated method to first execute the parameterless method
  * indicated by the annotation's value attribute. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;ImaLetYouFinishBut("interrupt")
  *   public void deliver(AcceptanceSpeech speech) {
  *     crowd.listen(speech);
  *   }
- *   
+ *
  *   public void interrupt() {
  *     crowd.listen("Kindly allow me to express my own opinion first.");
  *   }
  * </pre>
- * 
+ * <p/>
  * will cause the <code>deliver</code> method to first call the
  * <code>interrupt</code> method.
- * 
+ * <p/>
  * <p>TODO: Enforce this annotation.
  */
 @Retention(RetentionPolicy.CLASS)
@@ -49,5 +49,5 @@ import com.google.gag.annotation.team.Visionary;
 @Visionary("obreerbo")
 @HonorableMention("emma.vartdal")
 public @interface ImaLetYouFinishBut {
-  String value();
+    String value();
 }

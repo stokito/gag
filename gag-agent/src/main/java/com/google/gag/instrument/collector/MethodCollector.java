@@ -16,54 +16,53 @@
 
 package com.google.gag.instrument.collector;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.objectweb.asm.AnnotationVisitor;
-import org.objectweb.asm.Label;
-
 import com.google.gag.instrument.info.AnnoInfo;
 import com.google.gag.instrument.info.LocalVarInfo;
 import com.google.gag.instrument.info.MethodInfo;
+import org.objectweb.asm.AnnotationVisitor;
+import org.objectweb.asm.Label;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MethodCollector extends BaseMethodCollector {
 
-  private final MethodInfo.Maker methodMaker;
-  private final List<AnnoInfo> paramAnnos = new ArrayList<AnnoInfo>();
+    private final MethodInfo.Maker methodMaker;
+    private final List<AnnoInfo> paramAnnos = new ArrayList<AnnoInfo>();
 
-  public MethodCollector(MethodInfo.Maker methodMaker) {
-    this.methodMaker = methodMaker;
-  }
-
-  @Override
-  public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
-    AnnoInfo.Maker annoMaker = new AnnoInfo.Maker(desc);
-    methodMaker.addAnno(annoMaker.getAnnoInfo());
-    return new AnnoCollector(annoMaker);
-  }
-
-  @Override
-  public AnnotationVisitor visitParameterAnnotation(int param, String desc, boolean visible) {
-    AnnoInfo.Maker annoMaker = new AnnoInfo.Maker(param, desc);
-    paramAnnos.add(annoMaker.getAnnoInfo());
-    return new AnnoCollector(annoMaker);
-  }
-
-  @Override
-  public void visitLocalVariable(String name, String desc, String sig, Label start, Label end,
-      int index) {
-
-    if ("this".equals(name)) {
-      return;
+    public MethodCollector(MethodInfo.Maker methodMaker) {
+        this.methodMaker = methodMaker;
     }
-    LocalVarInfo.Maker localVarMaker = new LocalVarInfo.Maker(name, desc, index);
-    methodMaker.addLocalVarMaker(localVarMaker);
-  }
 
-  @Override
-  public void visitEnd() {
-    for (AnnoInfo anno : paramAnnos) {
-      methodMaker.addParamAnno(anno);
+    @Override
+    public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
+        AnnoInfo.Maker annoMaker = new AnnoInfo.Maker(desc);
+        methodMaker.addAnno(annoMaker.getAnnoInfo());
+        return new AnnoCollector(annoMaker);
     }
-  }
+
+    @Override
+    public AnnotationVisitor visitParameterAnnotation(int param, String desc, boolean visible) {
+        AnnoInfo.Maker annoMaker = new AnnoInfo.Maker(param, desc);
+        paramAnnos.add(annoMaker.getAnnoInfo());
+        return new AnnoCollector(annoMaker);
+    }
+
+    @Override
+    public void visitLocalVariable(String name, String desc, String sig, Label start, Label end,
+                                   int index) {
+
+        if ("this".equals(name)) {
+            return;
+        }
+        LocalVarInfo.Maker localVarMaker = new LocalVarInfo.Maker(name, desc, index);
+        methodMaker.addLocalVarMaker(localVarMaker);
+    }
+
+    @Override
+    public void visitEnd() {
+        for (AnnoInfo anno : paramAnnos) {
+            methodMaker.addParamAnno(anno);
+        }
+    }
 }

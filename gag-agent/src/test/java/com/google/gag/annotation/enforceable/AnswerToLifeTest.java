@@ -21,23 +21,23 @@ import junit.framework.TestCase;
 
 public class AnswerToLifeTest extends TestCase {
 
-  private AnswerToLifeTestClass testClass = new AnswerToLifeTestClass();
-  
-  public void testTheAnswer() {
-    Assert.assertEquals(42, testClass.intAnswer(123));
-    Assert.assertEquals(42L, testClass.longAnswer(123L));
-    Assert.assertEquals(42d, testClass.doubleAnswer(123d));
-    Assert.assertEquals(42f, testClass.floatAnswer(123f));
-    Assert.assertEquals((byte) 42, testClass.byteAnswer((byte) 123));
-    Assert.assertEquals((char) 42, testClass.charAnswer('a'));
-    Assert.assertEquals((short) 42, testClass.shortAnswer((short) 123));
+    private AnswerToLifeTestClass testClass = new AnswerToLifeTestClass();
 
-    Assert.assertEquals(new Integer(42), testClass.getIntegerAnswer(new Integer(123)));
-    Assert.assertEquals(new Long(42), testClass.getLongAnswer(new Long(123L)));
-    Assert.assertEquals(new Double(42), testClass.getDoubleAnswer(new Double(123d)));
-    Assert.assertEquals(new Float(42), testClass.getFloatAnswer(new Float(123f)));
-    Assert.assertEquals(new Byte((byte) 42), testClass.getByteAnswer(new Byte((byte) 123)));
-    Assert.assertEquals(new Short((short) 42), testClass.getShortAnswer(new Short((short) 123)));
-    Assert.assertEquals(new Character((char) 42), testClass.getCharacterAnswer(new Character('a')));
-  }
+    public void testTheAnswer() {
+        Assert.assertEquals(42, testClass.intAnswer(123));
+        Assert.assertEquals(42L, testClass.longAnswer(123L));
+        Assert.assertEquals(42d, testClass.doubleAnswer(123d));
+        Assert.assertEquals(42f, testClass.floatAnswer(123f));
+        Assert.assertEquals((byte) 42, testClass.byteAnswer((byte) 123));
+        Assert.assertEquals((char) 42, testClass.charAnswer('a'));
+        Assert.assertEquals((short) 42, testClass.shortAnswer((short) 123));
+
+        Assert.assertEquals(new Integer(42), testClass.getIntegerAnswer(new Integer(123)));
+        Assert.assertEquals(new Long(42), testClass.getLongAnswer(new Long(123L)));
+        Assert.assertEquals(new Double(42), testClass.getDoubleAnswer(new Double(123d)));
+        Assert.assertEquals(new Float(42), testClass.getFloatAnswer(new Float(123f)));
+        Assert.assertEquals(new Byte((byte) 42), testClass.getByteAnswer(new Byte((byte) 123)));
+        Assert.assertEquals(new Short((short) 42), testClass.getShortAnswer(new Short((short) 123)));
+        Assert.assertEquals(new Character((char) 42), testClass.getCharacterAnswer(new Character('a')));
+    }
 }

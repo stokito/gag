@@ -16,12 +16,12 @@
 
 package com.google.gag.annotation.remark;
 
+import com.google.gag.enumeration.MagicType;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import com.google.gag.enumeration.MagicType;
 
 /**
  * Stumble across code that somehow works beyond all reason?
@@ -41,5 +41,5 @@ import com.google.gag.enumeration.MagicType;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 public @interface Magic {
-  MagicType type() default MagicType.BLACK;
+    MagicType type() default MagicType.BLACK;
 }

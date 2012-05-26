@@ -18,10 +18,8 @@ package com.google.gag.enumeration;
 
 import com.google.gag.annotation.team.Visionary;
 
-/**
- * Reasons to stop.
- */
+/** Reasons to stop. */
 @Visionary("J&#246;rn Zaefferer")
 public enum Stop {
-  HAMMERTIME
+    HAMMERTIME
 }

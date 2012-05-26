@@ -16,12 +16,12 @@
 
 package com.google.gag.annotation.enforceable;
 
+import com.google.gag.enumeration.Property;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
-import com.google.gag.enumeration.Property;
 
 /**
  * Enforces that the annotated parameter does not have the specified property.
@@ -35,10 +35,11 @@ import com.google.gag.enumeration.Property;
  *     this.multiplier = multiplier;
  * }
  * </pre>
+ *
  * @see ThisHadBetterBe
  */
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.PARAMETER)
 public @interface ThisHadBetterNotBe {
-  Property value();
+    Property value();
 }

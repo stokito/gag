@@ -21,12 +21,10 @@ import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/**
- * @see LOL
- */
+/** @see LOL */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 public @interface Facepalm {
-  String value() default "";
+    String value() default "";
 }

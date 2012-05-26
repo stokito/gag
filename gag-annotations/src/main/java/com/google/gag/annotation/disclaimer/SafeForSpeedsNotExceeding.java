@@ -16,13 +16,9 @@
 
 package com.google.gag.annotation.disclaimer;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
 import com.google.gag.enumeration.SpeedUnits;
+
+import java.lang.annotation.*;
 
 /**
  * Indicates the maximum speed that a device running the annotated code has
@@ -41,10 +37,11 @@ import com.google.gag.enumeration.SpeedUnits;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({
-  ElementType.TYPE,
-  ElementType.METHOD,
-  ElementType.CONSTRUCTOR})
+        ElementType.TYPE,
+        ElementType.METHOD,
+        ElementType.CONSTRUCTOR})
 public @interface SafeForSpeedsNotExceeding {
-  double value();
-  SpeedUnits units();
+    double value();
+
+    SpeedUnits units();
 }

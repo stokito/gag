@@ -35,6 +35,7 @@ import java.lang.annotation.RetentionPolicy;
  *     }
  * }
  * </pre>
+ *
  * @see Facepalm
  * @see WTF
  * @see Booyah
@@ -42,5 +43,5 @@ import java.lang.annotation.RetentionPolicy;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface LOL {
-  String value() default "";
+    String value() default "";
 }

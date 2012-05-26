@@ -16,12 +16,12 @@
 
 package com.google.gag.annotation.enforceable;
 
+import com.google.gag.enumeration.Property;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
-import com.google.gag.enumeration.Property;
 
 /**
  * Enforces that the annotated parameter has the specified property.
@@ -36,10 +36,11 @@ import com.google.gag.enumeration.Property;
  *     ship.getEscapePod().insert(r2).jettison();
  * }
  * </pre>
+ *
  * @see ThisHadBetterNotBe
  */
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.PARAMETER)
 public @interface ThisHadBetterBe {
-  Property value();
+    Property value();
 }

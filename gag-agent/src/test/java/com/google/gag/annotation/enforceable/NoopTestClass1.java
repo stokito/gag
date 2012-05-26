@@ -16,59 +16,57 @@
 
 package com.google.gag.annotation.enforceable;
 
-import com.google.gag.annotation.enforceable.Noop;
-
 import java.util.List;
 
 public class NoopTestClass1 {
 
-  @Noop
-  public void addSomethingToList(List<String> list) {
-    list.add("foo");
-  }
+    @Noop
+    public void addSomethingToList(List<String> list) {
+        list.add("foo");
+    }
 
-  @Noop
-  public short returnShortOne() {
-    return 1;
-  }
+    @Noop
+    public short returnShortOne() {
+        return 1;
+    }
 
-  @Noop
-  public int returnIntOne() {
-    return 1;
-  }
+    @Noop
+    public int returnIntOne() {
+        return 1;
+    }
 
-  @Noop
-  public double returnDoubleOne() {
-    return 1.0;
-  }
+    @Noop
+    public double returnDoubleOne() {
+        return 1.0;
+    }
 
-  @Noop
-  public float returnFloatOne() {
-    return 1f;
-  }
+    @Noop
+    public float returnFloatOne() {
+        return 1f;
+    }
 
-  @Noop
-  public boolean returnTrue() {
-    return true;
-  }
+    @Noop
+    public boolean returnTrue() {
+        return true;
+    }
 
-  @Noop
-  public char returnCharA() {
-    return 'a';
-  }
+    @Noop
+    public char returnCharA() {
+        return 'a';
+    }
 
-  @Noop
-  public long returnLong() {
-    return 1L;
-  }
+    @Noop
+    public long returnLong() {
+        return 1L;
+    }
 
-  @Noop
-  public String returnNonNullString() {
-    return "foo";
-  }
+    @Noop
+    public String returnNonNullString() {
+        return "foo";
+    }
 
-  @Noop
-  public int[] returnNonNullArray() {
-    return new int[] { 1, 2, 3 };
-  }
+    @Noop
+    public int[] returnNonNullArray() {
+        return new int[]{1, 2, 3};
+    }
 }

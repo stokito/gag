@@ -24,39 +24,39 @@ import java.util.List;
 
 public class NoopTest extends TestCase {
 
-  public void testNoopMethodLevel() {
-    NoopTestClass1 testClass = new NoopTestClass1();
+    public void testNoopMethodLevel() {
+        NoopTestClass1 testClass = new NoopTestClass1();
 
-    List<String> list = new ArrayList<String>();
-    testClass.addSomethingToList(list);
-    Assert.assertTrue(list.isEmpty());
+        List<String> list = new ArrayList<String>();
+        testClass.addSomethingToList(list);
+        Assert.assertTrue(list.isEmpty());
 
-    Assert.assertEquals((short) 0, testClass.returnShortOne());
-    Assert.assertEquals(0, testClass.returnIntOne());
-    Assert.assertEquals(0L, testClass.returnLong());
-    Assert.assertEquals(0d, testClass.returnDoubleOne());
-    Assert.assertEquals(0f, testClass.returnFloatOne());
-    Assert.assertFalse(testClass.returnTrue());
-    Assert.assertEquals((char) 0, testClass.returnCharA());
-    Assert.assertNull(testClass.returnNonNullString());
-    Assert.assertNull(testClass.returnNonNullArray());
-  }
+        Assert.assertEquals((short) 0, testClass.returnShortOne());
+        Assert.assertEquals(0, testClass.returnIntOne());
+        Assert.assertEquals(0L, testClass.returnLong());
+        Assert.assertEquals(0d, testClass.returnDoubleOne());
+        Assert.assertEquals(0f, testClass.returnFloatOne());
+        Assert.assertFalse(testClass.returnTrue());
+        Assert.assertEquals((char) 0, testClass.returnCharA());
+        Assert.assertNull(testClass.returnNonNullString());
+        Assert.assertNull(testClass.returnNonNullArray());
+    }
 
-  public void testNoopClassLevel() {
-    NoopTestClass2 testClass = new NoopTestClass2();
+    public void testNoopClassLevel() {
+        NoopTestClass2 testClass = new NoopTestClass2();
 
-    List<String> list = new ArrayList<String>();
-    testClass.addSomethingToList(list);
-    Assert.assertTrue(list.isEmpty());
+        List<String> list = new ArrayList<String>();
+        testClass.addSomethingToList(list);
+        Assert.assertTrue(list.isEmpty());
 
-    assertEquals((short) 0, testClass.returnShortOne());
-    assertEquals(0, testClass.returnIntOne());
-    assertEquals(0L, testClass.returnLong());
-    assertEquals(0d, testClass.returnDoubleOne());
-    assertEquals(0f, testClass.returnFloatOne());
-    Assert.assertFalse(testClass.returnTrue());
-    assertEquals((char) 0, testClass.returnCharA());
-    Assert.assertNull(testClass.returnNonNullString());
-    Assert.assertNull(testClass.returnNonNullArray());
-  }
+        assertEquals((short) 0, testClass.returnShortOne());
+        assertEquals(0, testClass.returnIntOne());
+        assertEquals(0L, testClass.returnLong());
+        assertEquals(0d, testClass.returnDoubleOne());
+        assertEquals(0f, testClass.returnFloatOne());
+        Assert.assertFalse(testClass.returnTrue());
+        assertEquals((char) 0, testClass.returnCharA());
+        Assert.assertNull(testClass.returnNonNullString());
+        Assert.assertNull(testClass.returnNonNullArray());
+    }
 }

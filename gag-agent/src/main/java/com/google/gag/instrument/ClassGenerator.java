@@ -16,46 +16,45 @@
 
 package com.google.gag.instrument;
 
+import com.google.gag.instrument.info.ClassInfo;
 import org.objectweb.asm.ClassAdapter;
 import org.objectweb.asm.ClassWriter;
 
-import com.google.gag.instrument.info.ClassInfo;
-
 public abstract class ClassGenerator extends ClassAdapter {
-  private ClassWriter writer;
-  private ClassInfo classInfo;
-  private boolean instrumented;
+    private ClassWriter writer;
+    private ClassInfo classInfo;
+    private boolean instrumented;
 
-  public ClassGenerator() {
-    super(null);
-  }
+    public ClassGenerator() {
+        super(null);
+    }
 
-  protected abstract boolean canInstrument(ClassInfo classInfo);
+    protected abstract boolean canInstrument(ClassInfo classInfo);
 
-  final void init(ClassWriter writer, ClassInfo classInfo) {
-    this.cv = writer;
-    this.writer = writer;
-    this.classInfo = classInfo;
-    this.instrumented = false;
-  }
+    final void init(ClassWriter writer, ClassInfo classInfo) {
+        this.cv = writer;
+        this.writer = writer;
+        this.classInfo = classInfo;
+        this.instrumented = false;
+    }
 
-  protected ClassWriter writer() {
-    return writer;
-  }
+    protected ClassWriter writer() {
+        return writer;
+    }
 
-  protected ClassInfo classInfo() {
-    return classInfo;
-  }
+    protected ClassInfo classInfo() {
+        return classInfo;
+    }
 
-  protected void setInstrumented(boolean instrumented) {
-    this.instrumented = instrumented;
-  }
+    protected void setInstrumented(boolean instrumented) {
+        this.instrumented = instrumented;
+    }
 
-  /**
-   * Returns true if this {@code ClassGenerator} has instrumented the class
-   * bytes as a result of visiting the class.
-   */
-  protected boolean hasInstrumented() {
-    return instrumented;
-  }
+    /**
+     * Returns true if this {@code ClassGenerator} has instrumented the class
+     * bytes as a result of visiting the class.
+     */
+    protected boolean hasInstrumented() {
+        return instrumented;
+    }
 }

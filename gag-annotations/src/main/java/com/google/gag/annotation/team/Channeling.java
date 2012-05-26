@@ -16,18 +16,18 @@
 
 package com.google.gag.annotation.team;
 
+import com.google.gag.enumeration.ChannelingEntity;
+import com.google.gag.enumeration.OpinionOfHumanity;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import com.google.gag.enumeration.ChannelingEntity;
-import com.google.gag.enumeration.OpinionOfHumanity;
 
 /**
  * Indicates that the annotated code was influenced by the specified
  * individual. The person's entity type and/or disposition towards humanity
  * can also be indicated. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;Channeling(
  *       person = "C. Babbage",
@@ -39,7 +39,9 @@ import com.google.gag.enumeration.OpinionOfHumanity;
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("Mike Samuel")
 public @interface Channeling {
-  String person();
-  ChannelingEntity entity() default ChannelingEntity.UNSPECIFIED;
-  OpinionOfHumanity disposition() default OpinionOfHumanity.UNDISCLOSED;
+    String person();
+
+    ChannelingEntity entity() default ChannelingEntity.UNSPECIFIED;
+
+    OpinionOfHumanity disposition() default OpinionOfHumanity.UNDISCLOSED;
 }

@@ -16,14 +16,14 @@
 
 package com.google.gag.annotation.literary.verse;
 
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-
 /**
  * Indicates that the annotated code is a limerick. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;Limerick
  *   void scoreResult() {
@@ -34,7 +34,7 @@ import com.google.gag.annotation.team.Visionary;
  *         new SearchScore(94));
  *     searchTransaction.safelyCommit();
  *
- *   } 
+ *   }
  * </pre>
  */
 @Retention(RetentionPolicy.SOURCE)

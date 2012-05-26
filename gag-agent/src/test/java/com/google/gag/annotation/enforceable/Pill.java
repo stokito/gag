@@ -17,5 +17,5 @@
 package com.google.gag.annotation.enforceable;
 
 public enum Pill {
-  RED, BLUE
+    RED, BLUE
 }

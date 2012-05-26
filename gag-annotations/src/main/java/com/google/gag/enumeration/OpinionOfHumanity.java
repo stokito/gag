@@ -18,14 +18,12 @@ package com.google.gag.enumeration;
 
 import com.google.gag.annotation.team.Visionary;
 
-/**
- * Opinions about humanity.
- */
+/** Opinions about humanity. */
 @Visionary("Mike Samuel")
 public enum OpinionOfHumanity {
-  BENEVOLENT,
-  CAN_BE_PLACATED_WITH_CAFFEINE,
-  COMMITTED_TO_THE_EVENTUAL_DESTRUCTION_OF,
-  INDIFFERENT,
-  UNDISCLOSED
+    BENEVOLENT,
+    CAN_BE_PLACATED_WITH_CAFFEINE,
+    COMMITTED_TO_THE_EVENTUAL_DESTRUCTION_OF,
+    INDIFFERENT,
+    UNDISCLOSED
 }

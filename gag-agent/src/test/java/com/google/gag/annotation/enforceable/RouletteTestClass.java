@@ -16,14 +16,12 @@
 
 package com.google.gag.annotation.enforceable;
 
-import com.google.gag.annotation.enforceable.Roulette;
-
 public class RouletteTestClass {
 
-  @Roulette(
-      probability = 0.25,
-      exception = IllegalStateException.class,
-      message = "Something bogus just happened")
-  public void doesNothing() {
-  }
+    @Roulette(
+            probability = 0.25,
+            exception = IllegalStateException.class,
+            message = "Something bogus just happened")
+    public void doesNothing() {
+    }
 }

@@ -16,18 +16,16 @@
 
 package com.google.gag.annotation.disclaimer;
 
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-
-/**
- * Indicates that the annotated code was written under duress by a superior.
- */
+/** Indicates that the annotated code was written under duress by a superior. */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("cretz")
 public @interface BossMadeMeDoIt {
-  String value() default "";
+    String value() default "";
 }

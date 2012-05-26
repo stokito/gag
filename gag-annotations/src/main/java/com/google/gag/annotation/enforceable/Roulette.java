@@ -16,11 +16,7 @@
 
 package com.google.gag.annotation.enforceable;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * Causes the annotated method to throw the indicated throwable with the
@@ -41,7 +37,9 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Inherited
 public @interface Roulette {
-  double probability();
-  Class<? extends Throwable> exception() default RuntimeException.class;
-  String message() default "";
+    double probability();
+
+    Class<? extends Throwable> exception() default RuntimeException.class;
+
+    String message() default "";
 }

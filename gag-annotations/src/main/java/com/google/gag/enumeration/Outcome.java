@@ -18,13 +18,11 @@ package com.google.gag.enumeration;
 
 import com.google.gag.annotation.team.Visionary;
 
-/**
- * Outcome types.
- */
+/** Outcome types. */
 @Visionary("Hanneli")
 public enum Outcome {
-	EPIC,
-	IMPROVISATIONAL,
-	INCONCEIVABLE,
-	IRONIC
+    EPIC,
+    IMPROVISATIONAL,
+    INCONCEIVABLE,
+    IRONIC
 }

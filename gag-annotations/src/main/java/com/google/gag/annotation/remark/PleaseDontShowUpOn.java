@@ -16,16 +16,15 @@
 
 package com.google.gag.annotation.remark;
 
+import com.google.gag.enumeration.Website;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.enumeration.Website;
-
-/**
- * @see Hack
- */
+/** @see Hack */
 @Retention(RetentionPolicy.SOURCE)
 public @interface PleaseDontShowUpOn {
-  Website[] value();
-  String other() default "";
+    Website[] value();
+
+    String other() default "";
 }

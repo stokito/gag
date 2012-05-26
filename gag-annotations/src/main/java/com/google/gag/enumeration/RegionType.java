@@ -16,12 +16,10 @@
 
 package com.google.gag.enumeration;
 
-/**
- * Types of regions.
- */
+/** Types of regions. */
 public enum RegionType {
-  STATES,
-  COUNTRIES,
-  GALAXIES,
-  PARALLEL_UNIVERSES
+    STATES,
+    COUNTRIES,
+    GALAXIES,
+    PARALLEL_UNIVERSES
 }

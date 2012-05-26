@@ -16,16 +16,16 @@
 
 package com.google.gag.annotation.remark;
 
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-
 /**
  * Indicates that the individual implementing the annotated code shouldn't
  * have. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;OhNoYouDidnt(fingerSnapCount = 2)
  *   public void sortInLinearTime(List&lt;?&gt; list) {
@@ -35,5 +35,5 @@ import com.google.gag.annotation.team.Visionary;
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("billrobertson42")
 public @interface OhNoYouDidnt {
-  int fingerSnapCount() default 3;
+    int fingerSnapCount() default 3;
 }

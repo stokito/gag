@@ -18,19 +18,17 @@ package com.google.gag.enumeration;
 
 import com.google.gag.annotation.team.Visionary;
 
-/**
- * Measures of a poetic meter.
- */
+/** Measures of a poetic meter. */
 @Visionary("Paul Cowan")
 public enum Measure {
-	MONOMETER,
-	DIMETER,
-	TRIMETER,
-	TETRAMETER,
-	PENTAMETER,
-	HEXAMETER,
-	HEPTAMETER,
-	OCTOMETER,
-	IRREGULAR,
-	UNSPECIFIED
+    MONOMETER,
+    DIMETER,
+    TRIMETER,
+    TETRAMETER,
+    PENTAMETER,
+    HEXAMETER,
+    HEPTAMETER,
+    OCTOMETER,
+    IRREGULAR,
+    UNSPECIFIED
 }

@@ -46,9 +46,9 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.CLASS)
 @Target({
-    ElementType.METHOD,
-    ElementType.CONSTRUCTOR,
-    ElementType.TYPE})
+        ElementType.METHOD,
+        ElementType.CONSTRUCTOR,
+        ElementType.TYPE})
 public @interface Noop {
-  String value() default "";
+    String value() default "";
 }

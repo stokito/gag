@@ -22,7 +22,7 @@ import java.lang.annotation.RetentionPolicy;
 
 /**
  * Indicates that the specified team member is fired. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;Fired(
  *       person = "Dave",
@@ -34,6 +34,7 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("Benjamin Sergeant")
 public @interface Fired {
-  String person();
-  String reason() default "";
+    String person();
+
+    String reason() default "";
 }

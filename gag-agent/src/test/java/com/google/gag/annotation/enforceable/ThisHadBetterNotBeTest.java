@@ -16,321 +16,320 @@
 
 package com.google.gag.annotation.enforceable;
 
-import static junit.framework.Assert.*;
 import junit.framework.TestCase;
 
 public class ThisHadBetterNotBeTest extends TestCase {
 
-  private ThisHadBetterNotBeTestClass testClass = new ThisHadBetterNotBeTestClass();
+    private ThisHadBetterNotBeTestClass testClass = new ThisHadBetterNotBeTestClass();
 
-  /*
-   * NEGATIVE tests
-   */
+    /*
+    * NEGATIVE tests
+    */
 
-  public void testThisHadBetterNotBeNegativeSuccesses() {
-    doThisHadBetterNotBeNegativeSuccesses(0);
-    doThisHadBetterNotBeNegativeSuccesses(1);
-  }
-
-  public void testThisHadBetterNotBeNegativeFailures() {
-    try {
-      testClass.doNotAcceptNegInt(-1);
-      fail();
-    } catch(IllegalArgumentException e) {
+    public void testThisHadBetterNotBeNegativeSuccesses() {
+        doThisHadBetterNotBeNegativeSuccesses(0);
+        doThisHadBetterNotBeNegativeSuccesses(1);
     }
 
-    try {
-      testClass.doNotAcceptNegLong(-1);
-      fail();
-    } catch(IllegalArgumentException e) {
+    public void testThisHadBetterNotBeNegativeFailures() {
+        try {
+            testClass.doNotAcceptNegInt(-1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegLong(-1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegShort((short) -1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegDouble(-1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegFloat(-1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegObjectInteger(-1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegObjectLong((long) -1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegObjectShort((short) -1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegObjectDouble((double) -1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptNegObjectFloat((float) -1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
     }
 
-    try {
-      testClass.doNotAcceptNegShort((short) -1);
-      fail();
-    } catch(IllegalArgumentException e) {
+
+    /*
+    * POSITIVE tests
+    */
+
+    public void testThisHadBetterNotBePositiveSuccesses() {
+        doThisHadBetterNotBePositiveSuccesses(-1);
+        doThisHadBetterNotBePositiveSuccesses(0);
     }
 
-    try {
-      testClass.doNotAcceptNegDouble(-1);
-      fail();
-    } catch(IllegalArgumentException e) {
+    public void testThisHadBetterNotBePositiveFailures() {
+        try {
+            testClass.doNotAcceptPosInt(1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosLong(1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosShort((short) 1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosDouble(1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosFloat(1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosObjectInteger(1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosObjectLong((long) 1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosObjectShort((short) 1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosObjectDouble((double) 1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptPosObjectFloat((float) 1);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
     }
 
-    try {
-      testClass.doNotAcceptNegFloat(-1);
-      fail();
-    } catch(IllegalArgumentException e) {
+    /*
+    * ZERO tests
+    */
+
+    public void testThisHadBetterNotBeZeroSuccesses() {
+        doThisHadBetterNotBeZeroSuccesses(-1);
+        doThisHadBetterNotBeZeroSuccesses(1);
     }
 
-    try {
-      testClass.doNotAcceptNegObjectInteger(-1);
-      fail();
-    } catch(IllegalArgumentException e) {
+    public void testThisHadBetterNotBeZeroFailures() {
+        try {
+            testClass.doNotAcceptZeroInt(0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroLong(0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroShort((short) 0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroDouble(0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroFloat(0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroObjectInteger(0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroObjectLong((long) 0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroObjectShort((short) 0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroObjectDouble((double) 0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+
+        try {
+            testClass.doNotAcceptZeroObjectFloat((float) 0);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
     }
 
-    try {
-      testClass.doNotAcceptNegObjectLong((long) -1);
-      fail();
-    } catch(IllegalArgumentException e) {
+
+    /*
+    * NULL test
+    */
+
+    public void testThisHadBetterNotBeNull() {
+        testClass.doNotAcceptNullObject(new Object());
+        testClass.doNotAcceptNullObject(new int[]{});
+        try {
+            testClass.doNotAcceptNullObject(null);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
     }
 
-    try {
-      testClass.doNotAcceptNegObjectShort((short) -1);
-      fail();
-    } catch(IllegalArgumentException e) {
+
+    /*
+    * THE_BLUE_PILL, THE_RED_PILL tests
+    */
+
+    public void testThisHadBetterNotBePill() {
+        testClass.doNotAcceptTheBluePill(Pill.RED);
+        testClass.doNotAcceptTheRedPill(Pill.BLUE);
+        testClass.doNotAcceptTheBluePillObj(Pill.RED);
+        testClass.doNotAcceptTheBluePillObj(new Object());
+        try {
+            testClass.doNotAcceptTheRedPill(Pill.RED);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+        try {
+            testClass.doNotAcceptTheRedPillObj(Pill.RED);
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
     }
 
-    try {
-      testClass.doNotAcceptNegObjectDouble((double) -1);
-      fail();
-    } catch(IllegalArgumentException e) {
+
+    /*
+    * THE_STOLEN_DEATH_STAR_PLANS tests
+    */
+
+    public void testThisHadBetterNotBeStolenDeathStarPlans() {
+        testClass.doNotAcceptStolenDeathStarPlans(new Object());
+        testClass.doNotAcceptStolenDeathStarPlans(new DeathStarPlans(false));
+
+        try {
+            testClass.doNotAcceptStolenDeathStarPlans(new DeathStarPlans(true));
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
     }
 
-    try {
-      testClass.doNotAcceptNegObjectFloat((float) -1);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-  }
 
+    /*
+    * Helper methods
+    */
 
-  /*
-   * POSITIVE tests
-   */
-
-  public void testThisHadBetterNotBePositiveSuccesses() {
-    doThisHadBetterNotBePositiveSuccesses(-1);
-    doThisHadBetterNotBePositiveSuccesses(0);
-  }
-
-  public void testThisHadBetterNotBePositiveFailures() {
-    try {
-      testClass.doNotAcceptPosInt(1);
-      fail();
-    } catch(IllegalArgumentException e) {
+    private void doThisHadBetterNotBeNegativeSuccesses(int nonNegInt) {
+        testClass.doNotAcceptNegInt(nonNegInt);
+        testClass.doNotAcceptNegLong(nonNegInt);
+        testClass.doNotAcceptNegShort((short) nonNegInt);
+        testClass.doNotAcceptNegDouble(nonNegInt);
+        testClass.doNotAcceptNegFloat(nonNegInt);
+        testClass.doNotAcceptNegObjectInteger(nonNegInt);
+        testClass.doNotAcceptNegObjectLong((long) nonNegInt);
+        testClass.doNotAcceptNegObjectShort(new Short((short) nonNegInt));
+        testClass.doNotAcceptNegObjectDouble((double) nonNegInt);
+        testClass.doNotAcceptNegObjectFloat((float) nonNegInt);
     }
 
-    try {
-      testClass.doNotAcceptPosLong(1);
-      fail();
-    } catch(IllegalArgumentException e) {
+    private void doThisHadBetterNotBePositiveSuccesses(int nonPosInt) {
+        testClass.doNotAcceptPosInt(nonPosInt);
+        testClass.doNotAcceptPosLong(nonPosInt);
+        testClass.doNotAcceptPosShort((short) nonPosInt);
+        testClass.doNotAcceptPosDouble(nonPosInt);
+        testClass.doNotAcceptPosFloat(nonPosInt);
+        testClass.doNotAcceptPosObjectInteger(nonPosInt);
+        testClass.doNotAcceptPosObjectLong((long) nonPosInt);
+        testClass.doNotAcceptPosObjectShort(new Short((short) nonPosInt));
+        testClass.doNotAcceptPosObjectDouble((double) nonPosInt);
+        testClass.doNotAcceptPosObjectFloat((float) nonPosInt);
     }
 
-    try {
-      testClass.doNotAcceptPosShort((short) 1);
-      fail();
-    } catch(IllegalArgumentException e) {
+    private void doThisHadBetterNotBeZeroSuccesses(int nonZeroInt) {
+        testClass.doNotAcceptZeroInt(nonZeroInt);
+        testClass.doNotAcceptZeroLong(nonZeroInt);
+        testClass.doNotAcceptZeroShort((short) nonZeroInt);
+        testClass.doNotAcceptZeroDouble(nonZeroInt);
+        testClass.doNotAcceptZeroFloat(nonZeroInt);
+        testClass.doNotAcceptZeroObjectInteger(nonZeroInt);
+        testClass.doNotAcceptZeroObjectLong((long) nonZeroInt);
+        testClass.doNotAcceptZeroObjectShort(new Short((short) nonZeroInt));
+        testClass.doNotAcceptZeroObjectDouble((double) nonZeroInt);
+        testClass.doNotAcceptZeroObjectFloat((float) nonZeroInt);
     }
-
-    try {
-      testClass.doNotAcceptPosDouble(1);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptPosFloat(1);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptPosObjectInteger(1);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptPosObjectLong((long) 1);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptPosObjectShort((short) 1);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptPosObjectDouble((double) 1);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptPosObjectFloat((float) 1);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-  }
-
-  /*
-   * ZERO tests
-   */
-
-  public void testThisHadBetterNotBeZeroSuccesses() {
-    doThisHadBetterNotBeZeroSuccesses(-1);
-    doThisHadBetterNotBeZeroSuccesses(1);
-  }
-
-  public void testThisHadBetterNotBeZeroFailures() {
-    try {
-      testClass.doNotAcceptZeroInt(0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroLong(0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroShort((short) 0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroDouble(0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroFloat(0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroObjectInteger(0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroObjectLong((long) 0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroObjectShort((short) 0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroObjectDouble((double) 0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-
-    try {
-      testClass.doNotAcceptZeroObjectFloat((float) 0);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-  }
-
-
-  /*
-   * NULL test
-   */
-
-  public void testThisHadBetterNotBeNull() {
-    testClass.doNotAcceptNullObject(new Object());
-    testClass.doNotAcceptNullObject(new int[] {});
-    try {
-      testClass.doNotAcceptNullObject(null);
-      fail();
-    } catch(IllegalArgumentException e) {
-    }
-  }
-
-
-  /*
-   * THE_BLUE_PILL, THE_RED_PILL tests
-   */
-
-  public void testThisHadBetterNotBePill() {
-    testClass.doNotAcceptTheBluePill(Pill.RED);
-    testClass.doNotAcceptTheRedPill(Pill.BLUE);
-    testClass.doNotAcceptTheBluePillObj(Pill.RED);
-    testClass.doNotAcceptTheBluePillObj(new Object());
-    try {
-      testClass.doNotAcceptTheRedPill(Pill.RED);
-      fail();
-    } catch (IllegalArgumentException e) {
-    }
-    try {
-      testClass.doNotAcceptTheRedPillObj(Pill.RED);
-      fail();
-    } catch (IllegalArgumentException e) {
-    }
-  }
-
-
-  /*
-   * THE_STOLEN_DEATH_STAR_PLANS tests
-   */
-
-  public void testThisHadBetterNotBeStolenDeathStarPlans() {
-    testClass.doNotAcceptStolenDeathStarPlans(new Object());
-    testClass.doNotAcceptStolenDeathStarPlans(new DeathStarPlans(false));
-
-    try {
-      testClass.doNotAcceptStolenDeathStarPlans(new DeathStarPlans(true));
-      fail();
-    } catch (IllegalArgumentException e) {
-    }
-  }
-
-
-  /*
-   * Helper methods
-   */
-
-  private void doThisHadBetterNotBeNegativeSuccesses(int nonNegInt) {
-    testClass.doNotAcceptNegInt(nonNegInt);
-    testClass.doNotAcceptNegLong(nonNegInt);
-    testClass.doNotAcceptNegShort((short) nonNegInt);
-    testClass.doNotAcceptNegDouble(nonNegInt);
-    testClass.doNotAcceptNegFloat(nonNegInt);
-    testClass.doNotAcceptNegObjectInteger(nonNegInt);
-    testClass.doNotAcceptNegObjectLong((long) nonNegInt);
-    testClass.doNotAcceptNegObjectShort(new Short((short) nonNegInt));
-    testClass.doNotAcceptNegObjectDouble((double) nonNegInt);
-    testClass.doNotAcceptNegObjectFloat((float) nonNegInt);
-  }
-
-  private void doThisHadBetterNotBePositiveSuccesses(int nonPosInt) {
-    testClass.doNotAcceptPosInt(nonPosInt);
-    testClass.doNotAcceptPosLong(nonPosInt);
-    testClass.doNotAcceptPosShort((short) nonPosInt);
-    testClass.doNotAcceptPosDouble(nonPosInt);
-    testClass.doNotAcceptPosFloat(nonPosInt);
-    testClass.doNotAcceptPosObjectInteger(nonPosInt);
-    testClass.doNotAcceptPosObjectLong((long) nonPosInt);
-    testClass.doNotAcceptPosObjectShort(new Short((short) nonPosInt));
-    testClass.doNotAcceptPosObjectDouble((double) nonPosInt);
-    testClass.doNotAcceptPosObjectFloat((float) nonPosInt);
-  }
-
-  private void doThisHadBetterNotBeZeroSuccesses(int nonZeroInt) {
-    testClass.doNotAcceptZeroInt(nonZeroInt);
-    testClass.doNotAcceptZeroLong(nonZeroInt);
-    testClass.doNotAcceptZeroShort((short) nonZeroInt);
-    testClass.doNotAcceptZeroDouble(nonZeroInt);
-    testClass.doNotAcceptZeroFloat(nonZeroInt);
-    testClass.doNotAcceptZeroObjectInteger(nonZeroInt);
-    testClass.doNotAcceptZeroObjectLong((long) nonZeroInt);
-    testClass.doNotAcceptZeroObjectShort(new Short((short) nonZeroInt));
-    testClass.doNotAcceptZeroObjectDouble((double) nonZeroInt);
-    testClass.doNotAcceptZeroObjectFloat((float) nonZeroInt);
-  }
 }

@@ -16,68 +16,67 @@
 
 package com.google.gag.instrument.info;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Maps;
+import org.objectweb.asm.Type;
+
 import java.util.List;
 import java.util.Map;
 
-import org.objectweb.asm.Type;
-
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Maps;
-
 public class LocalVarInfo {
-  private final String name;
-  private final Type type;
-  private final int index;
-  private final Map<Type, AnnoInfo> annosByType = Maps.newLinkedHashMap();
+    private final String name;
+    private final Type type;
+    private final int index;
+    private final Map<Type, AnnoInfo> annosByType = Maps.newLinkedHashMap();
 
-  private LocalVarInfo(String name, String desc, int index) {
-    this.name = name;
-    this.type = Type.getType(desc);
-    this.index = index;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public Type getType() {
-    return type;
-  }
-
-  public int getIndex() {
-    return index;
-  }
-
-  public boolean hasAnno(Type annoType) {
-    return annosByType.containsKey(annoType);
-  }
-
-  public AnnoInfo getAnnoFor(Type annoType) {
-    return annosByType.get(annoType);
-  }
-
-  public List<AnnoInfo> getAnnos() {
-    return ImmutableList.copyOf(annosByType.values());
-  }
-
-  @Override
-  public String toString() {
-    return name + "::" + type.getClassName();
-  }
-
-  public static class Maker {
-    private final LocalVarInfo localVar;
-
-    public Maker(String name, String desc, int index) {
-      localVar = new LocalVarInfo(name, desc, index);
+    private LocalVarInfo(String name, String desc, int index) {
+        this.name = name;
+        this.type = Type.getType(desc);
+        this.index = index;
     }
 
-    public void addAnno(AnnoInfo anno) {
-      localVar.annosByType.put(anno.getType(), anno);
+    public String getName() {
+        return name;
     }
 
-    public LocalVarInfo getLocalVarInfo() {
-      return localVar;
+    public Type getType() {
+        return type;
     }
-  }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public boolean hasAnno(Type annoType) {
+        return annosByType.containsKey(annoType);
+    }
+
+    public AnnoInfo getAnnoFor(Type annoType) {
+        return annosByType.get(annoType);
+    }
+
+    public List<AnnoInfo> getAnnos() {
+        return ImmutableList.copyOf(annosByType.values());
+    }
+
+    @Override
+    public String toString() {
+        return name + "::" + type.getClassName();
+    }
+
+    public static class Maker {
+        private final LocalVarInfo localVar;
+
+        public Maker(String name, String desc, int index) {
+            localVar = new LocalVarInfo(name, desc, index);
+        }
+
+        public void addAnno(AnnoInfo anno) {
+            localVar.annosByType.put(anno.getType(), anno);
+        }
+
+        public LocalVarInfo getLocalVarInfo() {
+            return localVar;
+        }
+    }
 }

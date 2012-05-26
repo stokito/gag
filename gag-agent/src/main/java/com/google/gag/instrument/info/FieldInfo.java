@@ -16,79 +16,78 @@
 
 package com.google.gag.instrument.info;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Maps;
+import org.objectweb.asm.Type;
+
 import java.util.List;
 import java.util.Map;
 
-import org.objectweb.asm.Type;
-
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Maps;
-
 public class FieldInfo {
-  private final int access;
-  private final String name;
-  private final Type type;
-  private final String sig;
+    private final int access;
+    private final String name;
+    private final Type type;
+    private final String sig;
 
-  @SuppressWarnings("unused")
-  private final Object value;
+    @SuppressWarnings("unused")
+    private final Object value;
 
-  private final Map<Type, AnnoInfo> annosByType = Maps.newLinkedHashMap();
+    private final Map<Type, AnnoInfo> annosByType = Maps.newLinkedHashMap();
 
-  private FieldInfo(int access, String name, String desc, String sig, Object value) {
-    this.access = access;
-    this.name = name;
-    this.type = Type.getType(desc);
-    this.sig = sig;
-    this.value = value;
-  }
-
-  public int getAccess() {
-    return access;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public Type getType() {
-    return type;
-  }
-
-  public String getSig() {
-    return sig;
-  }
-
-  public boolean hasAnno(Type annoType) {
-    return annosByType.containsKey(annoType);
-  }
-
-  public AnnoInfo getAnnoFor(Type annoType) {
-    return annosByType.get(annoType);
-  }
-
-  public List<AnnoInfo> getAnnos() {
-    return ImmutableList.copyOf(annosByType.values());
-  }
-
-  @Override
-  public String toString() {
-    return "Field " + name + "::" + type.getClassName();
-  }
-
-  public static class Maker {
-    private final FieldInfo field;
-
-    public Maker(int access, String name, String desc, String sig, Object value) {
-      field = new FieldInfo(access, name, desc, sig, value);
+    private FieldInfo(int access, String name, String desc, String sig, Object value) {
+        this.access = access;
+        this.name = name;
+        this.type = Type.getType(desc);
+        this.sig = sig;
+        this.value = value;
     }
 
-    public void addAnno(AnnoInfo anno) {
-      field.annosByType.put(anno.getType(), anno);
+    public int getAccess() {
+        return access;
     }
 
-    public FieldInfo getFieldInfo() {
-      return field;
+    public String getName() {
+        return name;
     }
-  }
+
+    public Type getType() {
+        return type;
+    }
+
+    public String getSig() {
+        return sig;
+    }
+
+    public boolean hasAnno(Type annoType) {
+        return annosByType.containsKey(annoType);
+    }
+
+    public AnnoInfo getAnnoFor(Type annoType) {
+        return annosByType.get(annoType);
+    }
+
+    public List<AnnoInfo> getAnnos() {
+        return ImmutableList.copyOf(annosByType.values());
+    }
+
+    @Override
+    public String toString() {
+        return "Field " + name + "::" + type.getClassName();
+    }
+
+    public static class Maker {
+        private final FieldInfo field;
+
+        public Maker(int access, String name, String desc, String sig, Object value) {
+            field = new FieldInfo(access, name, desc, sig, value);
+        }
+
+        public void addAnno(AnnoInfo anno) {
+            field.annosByType.put(anno.getType(), anno);
+        }
+
+        public FieldInfo getFieldInfo() {
+            return field;
+        }
+    }
 }

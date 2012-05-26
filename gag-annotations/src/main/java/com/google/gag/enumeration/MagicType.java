@@ -16,11 +16,9 @@
 
 package com.google.gag.enumeration;
 
-/**
- * Types of magic.
- */
+/** Types of magic. */
 public enum MagicType {
-  BLACK,
-  WHITE,
-  VOODOO
+    BLACK,
+    WHITE,
+    VOODOO
 }

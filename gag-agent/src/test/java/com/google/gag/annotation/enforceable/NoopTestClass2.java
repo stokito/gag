@@ -16,50 +16,48 @@
 
 package com.google.gag.annotation.enforceable;
 
-import com.google.gag.annotation.enforceable.Noop;
-
 import java.util.List;
 
 @Noop
 public class NoopTestClass2 {
 
-  public void addSomethingToList(List<String> list) {
-    list.add("foo");
-  }
+    public void addSomethingToList(List<String> list) {
+        list.add("foo");
+    }
 
-  public short returnShortOne() {
-    return 1;
-  }
+    public short returnShortOne() {
+        return 1;
+    }
 
-  public int returnIntOne() {
-    return 1;
-  }
+    public int returnIntOne() {
+        return 1;
+    }
 
-  public double returnDoubleOne() {
-    return 1.0;
-  }
+    public double returnDoubleOne() {
+        return 1.0;
+    }
 
-  public float returnFloatOne() {
-    return 1f;
-  }
+    public float returnFloatOne() {
+        return 1f;
+    }
 
-  public boolean returnTrue() {
-    return true;
-  }
+    public boolean returnTrue() {
+        return true;
+    }
 
-  public char returnCharA() {
-    return 'a';
-  }
+    public char returnCharA() {
+        return 'a';
+    }
 
-  public long returnLong() {
-    return 1L;
-  }
+    public long returnLong() {
+        return 1L;
+    }
 
-  public String returnNonNullString() {
-    return "foo";
-  }
+    public String returnNonNullString() {
+        return "foo";
+    }
 
-  public int[] returnNonNullArray() {
-    return new int[] { 1, 2, 3 };
-  }
+    public int[] returnNonNullArray() {
+        return new int[]{1, 2, 3};
+    }
 }

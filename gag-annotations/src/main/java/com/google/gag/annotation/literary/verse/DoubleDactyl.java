@@ -16,14 +16,14 @@
 
 package com.google.gag.annotation.literary.verse;
 
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-
 /**
  * Indicates that the annotated code is a double dactyl. For example:
- *
+ * <p/>
  * <pre>
  *   &#064;DoubleDactyl
  *   public void createNewTractor() {

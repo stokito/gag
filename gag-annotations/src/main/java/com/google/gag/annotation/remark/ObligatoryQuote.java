@@ -16,11 +16,11 @@
 
 package com.google.gag.annotation.remark;
 
+import com.google.gag.enumeration.Source;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import com.google.gag.enumeration.Source;
 
 /**
  * Ever get the urge to leave a quote? Use {@code @ObligatoryQuote}:
@@ -35,8 +35,11 @@ import com.google.gag.enumeration.Source;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ObligatoryQuote {
-  String quote();
-  Source source();
-  String other() default "";
-  String citation() default "";
+    String quote();
+
+    Source source();
+
+    String other() default "";
+
+    String citation() default "";
 }

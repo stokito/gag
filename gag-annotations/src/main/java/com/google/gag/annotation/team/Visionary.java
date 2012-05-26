@@ -20,11 +20,9 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/**
- * Indicates that the annotated code is attributed to the indicated person.
- */
+/** Indicates that the annotated code is attributed to the indicated person. */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Visionary {
-  String value() default "";
+    String value() default "";
 }

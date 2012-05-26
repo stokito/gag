@@ -16,13 +16,11 @@
 
 package com.google.gag.enumeration;
 
-/**
- * Measures of poetic meter.
- */
+/** Measures of poetic meter. */
 public enum Feet {
-  ANAPAESTIC,
-  IAMBIC,
-  PYRRHIC,
-  SPONDAIC,
-  TROCHAIC
+    ANAPAESTIC,
+    IAMBIC,
+    PYRRHIC,
+    SPONDAIC,
+    TROCHAIC
 }

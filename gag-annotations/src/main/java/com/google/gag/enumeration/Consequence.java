@@ -18,13 +18,11 @@ package com.google.gag.enumeration;
 
 import com.google.gag.annotation.team.Visionary;
 
-/**
- * Consequences.
- */
+/** Consequences. */
 @Visionary("Paul Cowan")
 public enum Consequence {
-  ICE_COLD_STARE,
-  PAPER_CUT,
-  SILENT_TREATMENT,
-  VOGON_POETRY_RECITAL
+    ICE_COLD_STARE,
+    PAPER_CUT,
+    SILENT_TREATMENT,
+    VOGON_POETRY_RECITAL
 }

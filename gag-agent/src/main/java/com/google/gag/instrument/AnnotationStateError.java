@@ -17,8 +17,8 @@
 package com.google.gag.instrument;
 
 public class AnnotationStateError extends Error {
-  
-  public AnnotationStateError(String message) {
-    super(message);
-  }
+
+    public AnnotationStateError(String message) {
+        super(message);
+    }
 }

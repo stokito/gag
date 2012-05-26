@@ -16,11 +16,11 @@
 
 package com.google.gag.annotation.disclaimer;
 
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import com.google.gag.annotation.team.Visionary;
 
 /**
  * Warning that the annotated code is the result of the specified awesome
@@ -30,5 +30,5 @@ import com.google.gag.annotation.team.Visionary;
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("cretz")
 public @interface IAmAwesome {
-  String value() default "";
+    String value() default "";
 }

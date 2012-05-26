@@ -16,14 +16,14 @@
 
 package com.google.gag.annotation.remark;
 
+import com.google.gag.enumeration.FamilyMember;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.enumeration.FamilyMember;
-
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface WhosYour {
-  FamilyMember value();
+    FamilyMember value();
 }

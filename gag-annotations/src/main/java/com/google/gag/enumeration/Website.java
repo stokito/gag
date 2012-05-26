@@ -16,19 +16,17 @@
 
 package com.google.gag.enumeration;
 
-/**
- * Websites yo.
- */
+/** Websites yo. */
 public enum Website {
-  DIGG,
-  DZONE,
-  METAFILTER,
-  REDDIT,
-  SLASHDOT,
-  STACKOVERFLOW,
-  STUMBLEUPON,
-  TECHCRUNCH,
-  VALLEYWAG,
-  WIKIPEDIA,
-  OTHER
+    DIGG,
+    DZONE,
+    METAFILTER,
+    REDDIT,
+    SLASHDOT,
+    STACKOVERFLOW,
+    STUMBLEUPON,
+    TECHCRUNCH,
+    VALLEYWAG,
+    WIKIPEDIA,
+    OTHER
 }

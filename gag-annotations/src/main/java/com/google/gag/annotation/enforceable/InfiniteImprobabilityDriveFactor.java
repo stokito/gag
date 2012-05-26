@@ -35,6 +35,7 @@ import java.lang.annotation.Inherited;
  */
 @Inherited
 public @interface InfiniteImprobabilityDriveFactor {
-  int base();
-  long power();
+    int base();
+
+    long power();
 }

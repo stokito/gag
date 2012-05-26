@@ -16,15 +16,13 @@
 
 package com.google.gag.enumeration;
 
-/**
- * Properties of method parameters.
- */
+/** Properties of method parameters. */
 public enum Property {
-  POSITIVE,
-  NEGATIVE,
-  ZERO,
-  NULL,
-  THE_BLUE_PILL,
-  THE_RED_PILL,
-  THE_STOLEN_DEATH_STAR_PLANS
+    POSITIVE,
+    NEGATIVE,
+    ZERO,
+    NULL,
+    THE_BLUE_PILL,
+    THE_RED_PILL,
+    THE_STOLEN_DEATH_STAR_PLANS
 }

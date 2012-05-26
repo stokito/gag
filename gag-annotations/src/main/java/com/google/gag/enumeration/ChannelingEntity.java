@@ -18,18 +18,16 @@ package com.google.gag.enumeration;
 
 import com.google.gag.annotation.team.Visionary;
 
-/**
- * Channeling entities.
- */
+/** Channeling entities. */
 @Visionary("Mike Samuel")
 public enum ChannelingEntity {
-  ALTERNATE_REALITY_SELF,
-  ARMY_OF_NANOBOTS,
-  FUTURE_SELF,
-  EX_HUMAN,
-  INTERN,
-  LIZARD_PERSON,
-  OLD_ONE,
-  SPIRIT,
-  UNSPECIFIED
+    ALTERNATE_REALITY_SELF,
+    ARMY_OF_NANOBOTS,
+    FUTURE_SELF,
+    EX_HUMAN,
+    INTERN,
+    LIZARD_PERSON,
+    OLD_ONE,
+    SPIRIT,
+    UNSPECIFIED
 }

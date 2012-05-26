@@ -16,11 +16,9 @@
 
 package com.google.gag.enumeration;
 
-/**
- * Carbon footprint units of measure.
- */
+/** Carbon footprint units of measure. */
 public enum CO2Units {
-  GRAMS_PER_MEGAJOULE,
-  FIRKINS_PER_FORTNIGHT,
-  KILDERKINS_PER_KILOWATT_HOUR
+    GRAMS_PER_MEGAJOULE,
+    FIRKINS_PER_FORTNIGHT,
+    KILDERKINS_PER_KILOWATT_HOUR
 }

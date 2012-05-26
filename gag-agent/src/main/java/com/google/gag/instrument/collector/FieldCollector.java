@@ -16,33 +16,32 @@
 
 package com.google.gag.instrument.collector;
 
+import com.google.gag.instrument.info.AnnoInfo;
+import com.google.gag.instrument.info.FieldInfo;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Attribute;
 import org.objectweb.asm.FieldVisitor;
 
-import com.google.gag.instrument.info.AnnoInfo;
-import com.google.gag.instrument.info.FieldInfo;
- 
 public class FieldCollector implements FieldVisitor {
 
-  private final FieldInfo.Maker fieldMaker;
+    private final FieldInfo.Maker fieldMaker;
 
-  public FieldCollector(FieldInfo.Maker fieldMaker) {
-    this.fieldMaker = fieldMaker;
-  }
+    public FieldCollector(FieldInfo.Maker fieldMaker) {
+        this.fieldMaker = fieldMaker;
+    }
 
-  @Override
-  public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
-    AnnoInfo.Maker annoMaker = new AnnoInfo.Maker(desc);
-    fieldMaker.addAnno(annoMaker.getAnnoInfo());
-    return new AnnoCollector(annoMaker);
-  }
+    @Override
+    public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
+        AnnoInfo.Maker annoMaker = new AnnoInfo.Maker(desc);
+        fieldMaker.addAnno(annoMaker.getAnnoInfo());
+        return new AnnoCollector(annoMaker);
+    }
 
-  @Override
-  public void visitAttribute(Attribute attr) {
-  }
+    @Override
+    public void visitAttribute(Attribute attr) {
+    }
 
-  @Override
-  public void visitEnd() {
-  }
+    @Override
+    public void visitEnd() {
+    }
 }

@@ -35,5 +35,5 @@ import java.lang.annotation.RetentionPolicy;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface WrittenWhile {
-  String value();
+    String value();
 }

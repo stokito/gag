@@ -16,11 +16,9 @@
 
 package com.google.gag.enumeration;
 
-/**
- * Family members.
- */
+/** Family members. */
 public enum FamilyMember {
-  DADDY,
-  MOMMY,
-  PARENTAL_UNIT
+    DADDY,
+    MOMMY,
+    PARENTAL_UNIT
 }

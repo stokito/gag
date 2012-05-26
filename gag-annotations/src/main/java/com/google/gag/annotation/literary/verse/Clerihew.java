@@ -16,14 +16,12 @@
 
 package com.google.gag.annotation.literary.verse;
 
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-
-/**
- * Indicates that the annotated code is a clerihew.
- */
+/** Indicates that the annotated code is a clerihew. */
 @Retention(RetentionPolicy.SOURCE)
 @Visionary("Paul Cowan")
 public @interface Clerihew {

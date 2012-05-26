@@ -18,13 +18,13 @@ package com.google.gag.annotation.enforceable;
 
 public class DeathStarPlans {
 
-  private final boolean isStolen;
+    private final boolean isStolen;
 
-  public DeathStarPlans(boolean isStolen) {
-    this.isStolen = isStolen;
-  }
+    public DeathStarPlans(boolean isStolen) {
+        this.isStolen = isStolen;
+    }
 
-  public boolean isStolen() {
-    return isStolen;
-  }
+    public boolean isStolen() {
+        return isStolen;
+    }
 }

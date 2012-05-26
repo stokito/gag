@@ -16,11 +16,11 @@
 
 package com.google.gag.annotation.literary;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-
 import com.google.gag.enumeration.Feet;
 import com.google.gag.enumeration.Measure;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
  * Indicates that the annotated code follows the specified poetic meter.
@@ -31,6 +31,7 @@ import com.google.gag.enumeration.Measure;
  */
 @Retention(RetentionPolicy.SOURCE)
 public @interface Meter {
-  Feet feet();
-  Measure measure() default Measure.UNSPECIFIED;
+    Feet feet();
+
+    Measure measure() default Measure.UNSPECIFIED;
 }

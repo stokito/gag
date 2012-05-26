@@ -16,28 +16,29 @@
 
 package com.google.gag.annotation.disclaimer;
 
+import com.google.gag.annotation.team.Visionary;
+import com.google.gag.enumeration.Consequence;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-import com.google.gag.enumeration.Consequence;
-
 /**
  * Indicates that the annotated code should not be modified without consulting
  * the specified person. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;HandsOff(
  *       byOrderOf = "Jules Winnfield",
  *       onPainOf = Consequence.ICE_COLD_STARE)
- *   public class MysteriousBriefcase { 
+ *   public class MysteriousBriefcase {
  * </pre>
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("Paul Cowan")
 public @interface HandsOff {
-  String byOrderOf();
-  Consequence onPainOf();
+    String byOrderOf();
+
+    Consequence onPainOf();
 }

@@ -18,17 +18,15 @@ package com.google.gag.enumeration;
 
 import com.google.gag.annotation.team.Visionary;
 
-/**
- * Locations.
- */
+/** Locations. */
 @Visionary("Paul Cowan")
 public enum Where {
-  BATH,
-  BED,
-  BORING_MEETING,
-  DMV,
-  GYM_WORKOUT,
-  SHOWER,
-  TOILET,
-  TRAFFIC_JAM
+    BATH,
+    BED,
+    BORING_MEETING,
+    DMV,
+    GYM_WORKOUT,
+    SHOWER,
+    TOILET,
+    TRAFFIC_JAM
 }

@@ -29,11 +29,12 @@ import java.lang.annotation.RetentionPolicy;
  * public String unescapePseudoEscapedCommasAndSemicolons(String url) {
  * }
  * </pre>
+ *
  * @see PleaseDontShowUpOn
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 public @interface Hack {
-  String value() default "";
+    String value() default "";
 }

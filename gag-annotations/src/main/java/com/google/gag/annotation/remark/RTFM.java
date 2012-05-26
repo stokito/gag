@@ -16,16 +16,16 @@
 
 package com.google.gag.annotation.remark;
 
+import com.google.gag.annotation.team.Visionary;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.google.gag.annotation.team.Visionary;
-
 /**
  * Indicates that the author of the annotated code is strongly encouraged to
  * read the manual at the specified URL. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;RTFM("http://java.sun.com/javase/6/docs/api/java/lang/String.html")
  *   private static String stripPeriods(String s) {
@@ -37,5 +37,5 @@ import com.google.gag.annotation.team.Visionary;
 @Retention(RetentionPolicy.RUNTIME)
 @Visionary("andy.tokarev")
 public @interface RTFM {
-  String value() default "";
+    String value() default "";
 }

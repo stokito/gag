@@ -21,7 +21,7 @@ import java.lang.annotation.RetentionPolicy;
 
 /**
  * Indicates that the annotated code is a haiku. For example:
- * 
+ * <p/>
  * <pre>
  *   &#064;Haiku
  *   public void checkNodes() {

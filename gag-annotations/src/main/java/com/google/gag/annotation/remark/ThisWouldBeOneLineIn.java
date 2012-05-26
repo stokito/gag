@@ -36,6 +36,7 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Retention(RetentionPolicy.SOURCE)
 public @interface ThisWouldBeOneLineIn {
-  String language();
-  String toWit();
+    String language();
+
+    String toWit();
 }

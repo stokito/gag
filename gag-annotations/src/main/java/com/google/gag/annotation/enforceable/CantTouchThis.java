@@ -16,37 +16,37 @@
 
 package com.google.gag.annotation.enforceable;
 
+import com.google.gag.annotation.team.Visionary;
+import com.google.gag.enumeration.Stop;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.google.gag.annotation.team.Visionary;
-import com.google.gag.enumeration.Stop;
-
 /**
  * Replaces the implementation of the annotated method to instead print "Stop"
  * along with the specified reason to standard out. For example, calling the
  * method:
- * 
+ * <p/>
  * <pre>
  *   &#064;CantTouchThis(Stop.HAMMERTIME)
  *   public void tryToTouchThis() {
  *     System.out.println("This has been touched.");
  *   }
  * </pre>
- * 
+ * <p/>
  * will cause "Stop, HAMMERTIME" to be printed to standard out.
- * 
+ * <p/>
  * <p>Methods returning primitive numeric values return the equivalent of 0;
  * methods returning boolean return false; methods returning objects return
  * null.
- * 
+ * <p/>
  * <p>TODO: Enforce this annotation.
  */
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.METHOD)
 @Visionary("J&#246;rn Zaefferer")
 public @interface CantTouchThis {
-  Stop value();
+    Stop value();
 }

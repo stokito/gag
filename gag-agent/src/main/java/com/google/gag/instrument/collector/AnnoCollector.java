@@ -16,42 +16,41 @@
 
 package com.google.gag.instrument.collector;
 
-import org.objectweb.asm.AnnotationVisitor;
-
 import com.google.gag.instrument.info.AnnoInfo;
+import org.objectweb.asm.AnnotationVisitor;
 
 public class AnnoCollector implements AnnotationVisitor {
 
-  private AnnoInfo.Maker annoMaker;
+    private AnnoInfo.Maker annoMaker;
 
-  public AnnoCollector(AnnoInfo.Maker annoMaker) {
-    this.annoMaker = annoMaker;
-  }
+    public AnnoCollector(AnnoInfo.Maker annoMaker) {
+        this.annoMaker = annoMaker;
+    }
 
-  @Override
-  public void visit(String name, Object value) {
-    annoMaker.addValue(name, value);
-  }
+    @Override
+    public void visit(String name, Object value) {
+        annoMaker.addValue(name, value);
+    }
 
-  @Override
-  public void visitEnum(String name, String desc, String value) {
-    // TODO: Support enums properly.
-    annoMaker.addValue(name, value);
-  }
+    @Override
+    public void visitEnum(String name, String desc, String value) {
+        // TODO: Support enums properly.
+        annoMaker.addValue(name, value);
+    }
 
-  @Override
-  public AnnotationVisitor visitAnnotation(String name, String desc) {
-    // TODO: Support inner annotations.
-    return this;
-  }
+    @Override
+    public AnnotationVisitor visitAnnotation(String name, String desc) {
+        // TODO: Support inner annotations.
+        return this;
+    }
 
-  @Override
-  public AnnotationVisitor visitArray(String name) {
-    // TODO: Support arrays annotations.
-    return null;
-  }
+    @Override
+    public AnnotationVisitor visitArray(String name) {
+        // TODO: Support arrays annotations.
+        return null;
+    }
 
-  @Override
-  public void visitEnd() {
-  }
+    @Override
+    public void visitEnd() {
+    }
 }
