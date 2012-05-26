@@ -19,6 +19,14 @@ package com.google.gag.annotation.literary;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * <pre>
+ * &#064;HapaxLegomenon
+ * public interface Honorificabilitudinitatibus {
+ *     void achieve(Honour honour);
+ * }
+ * </pre>
+ */
 @Retention(RetentionPolicy.SOURCE)
 public @interface HapaxLegomenon {
 }

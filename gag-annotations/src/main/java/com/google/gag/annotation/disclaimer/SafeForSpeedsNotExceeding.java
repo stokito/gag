@@ -26,7 +26,17 @@ import com.google.gag.enumeration.SpeedUnits;
 
 /**
  * Indicates the maximum speed that a device running the annotated code has
- * been tested to function correctly with. 
+ * been tested to function correctly with.
+ * <p/>
+ * Meant for code residing on embedded devices propelled at breakneck speeds, this annotation let's you indicate the maximum speed your code-carrying device was successfully tested at.
+ * Valid speed units can be found in {@link SpeedUnits}.
+ * <pre>
+ * &#064;SafeForSpeedsNotExceeding(
+ *  value = 1.15572735,
+ *  units = ATTOPARSECS_PER_MICROFORTNIGHT)
+ * public class QuantumDecoherenceStabilizer {
+ * }
+ * </pre>
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

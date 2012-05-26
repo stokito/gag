@@ -20,6 +20,17 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * At times, you may feel the need to call out your source of inspiration, go ahead and {@code @ShoutOutTo} them:
+ * <pre>
+ * &#064;ShoutOutTo("The Buzz Out Loud crew")
+ * public void castPod() {
+ *     jason.setLength(INDETERMINATE);
+ *     molly.activateNerdVoice();
+ *     tom.expatiateOratorically();
+ * }
+ </pre>
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ShoutOutTo {

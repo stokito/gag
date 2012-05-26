@@ -21,6 +21,16 @@ import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * You can also use this annotation to preemptively qualify your own miserable code.
+ * <pre>
+ * &#064;Hack
+ * &#064;PleaseDontShowUpOn(Website.REDDIT)
+ * public String unescapePseudoEscapedCommasAndSemicolons(String url) {
+ * }
+ * </pre>
+ * @see PleaseDontShowUpOn
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited

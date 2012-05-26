@@ -25,6 +25,18 @@ import com.google.gag.enumeration.Property;
 
 /**
  * Enforces that the annotated parameter has the specified property.
+ * <p/>
+ * {@link ThisHadBetterBe} and {@link ThisHadBetterNotBe}
+ * <p/>
+ * These annotations are useful to ensure that your method parameters are what you expect them to be, dagnabbit.
+ * If you want a succinct alternatively to bulletproofing your parameters with preconditions, use these.
+ * <pre>
+ * public void misappropriate(@ThisHadBetterBe(THE_STOLEN_DEATH_STAR_PLANS) DataTape tape) {
+ *     r2.record(tape.play());
+ *     ship.getEscapePod().insert(r2).jettison();
+ * }
+ * </pre>
+ * @see ThisHadBetterNotBe
  */
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.PARAMETER)

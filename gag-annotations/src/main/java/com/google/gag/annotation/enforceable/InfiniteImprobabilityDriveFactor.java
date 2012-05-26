@@ -22,6 +22,16 @@ import java.lang.annotation.Inherited;
  * Causes the annotated code to be implemented via the Infinite Improbability
  * Drive at improbability factor equal to the specified base to the specified
  * power.
+ * <p/>
+ * Reserve this annotation for emergencies.
+ * Say you've pushed off that impossible task, you have no time left and your team lead is screaming code freeze.
+ * Rather than throwing in the towel, put this annotation on your unimplemented interface and pray the Infinite Improbability Drive activates in time to save your hide.
+ * <pre>
+ * &#064;InfiniteImprobabilityDriveFactor(base = 2, power = 43112609)
+ * public interface Salesman {
+ *     List&lt;Road&gt; travelShortestPath(List&lt;City&gt; cities);
+ * }
+ * </pre>
  */
 @Inherited
 public @interface InfiniteImprobabilityDriveFactor {

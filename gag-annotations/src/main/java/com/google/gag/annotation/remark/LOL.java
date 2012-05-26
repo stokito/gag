@@ -20,6 +20,25 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * <pre>
+ * &#064;LOL @Facepalm
+ * &#064;WTF("just use Collections.reverse()")
+ * &#064;Booyah
+ * private static &lt;T&gt; void invertOrdering(List&lt;T&gt; list) {
+ *     for (int i = 0; i < list.size() / 2; i++) {
+ *         int j = list.size() - 1 - i;
+ *         T item1 = list.get(i);
+ *         T item2 = list.get(j);
+ *         list.set(i, item2);
+ *         list.set(j, item1);
+ *     }
+ * }
+ * </pre>
+ * @see Facepalm
+ * @see WTF
+ * @see Booyah
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface LOL {

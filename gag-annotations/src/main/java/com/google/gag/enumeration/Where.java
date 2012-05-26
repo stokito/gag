@@ -24,7 +24,7 @@ import com.google.gag.annotation.team.Visionary;
 @Visionary("Paul Cowan")
 public enum Where {
   BATH,
-	BED,
+  BED,
   BORING_MEETING,
   DMV,
   GYM_WORKOUT,

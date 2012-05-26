@@ -22,6 +22,16 @@ import java.lang.annotation.RetentionPolicy;
 
 import com.google.gag.enumeration.Source;
 
+/**
+ * Ever get the urge to leave a quote? Use {@code @ObligatoryQuote}:
+ * <pre>
+ * &#064;ObligatoryQuote(
+ *     quote = "Remember, raptors run at 10 m/s and they do not know fear."
+ *     source = Source.XKCD,
+ *     citation = "http://xkcd.com/135/")
+ * public Route planRoute(FloorPlan floorPlan, Set&lt;Velociraptor&gt; raptors);
+ * </pre>
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ObligatoryQuote {

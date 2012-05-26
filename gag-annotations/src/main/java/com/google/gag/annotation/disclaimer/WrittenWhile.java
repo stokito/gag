@@ -23,6 +23,14 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * Discloses the condition the developer was in when writing the annotated
  * code.
+ * <p/>
+ * There are times when you haven't given your best performance. Perhaps you were distracted. Perhaps you want everyone to think you were. That's your call. We won't judge you. We just want to give you an out.
+ * <pre>
+ * &#064;WrittenWhile("surfing Chatroulette")
+ * public interface You {
+ * void spinRightRoundBabyRightRound(Me me);
+ * }
+ * </pre>
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

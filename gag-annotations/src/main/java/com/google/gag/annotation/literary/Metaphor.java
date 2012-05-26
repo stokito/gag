@@ -19,6 +19,13 @@ package com.google.gag.annotation.literary;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * <pre>
+ * &#064;Metaphor
+ *  public interface Life extends Box&lt;Chocolate&gt; {
+ * }
+ * </pre>
+ */
 @Retention(RetentionPolicy.SOURCE)
 public @interface Metaphor {
 }

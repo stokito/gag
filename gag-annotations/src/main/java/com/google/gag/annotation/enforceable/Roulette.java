@@ -25,6 +25,17 @@ import java.lang.annotation.Target;
 /**
  * Causes the annotated method to throw the indicated throwable with the
  * specified probability.
+ * <p/>
+ * Do you have a service method? Feeling neglected by your clients?
+ * Add a simple @Roulette and sit back while the method throws exceptions at the specified rate.
+ * <pre>
+ * &#064;Roulette(
+ *     probability = 0.005,
+ *     exception = PayYourContractorException,
+ *     message = "Courtesy reminder")
+ * public Service getRockSolidService() {
+ * }
+ * </pre>
  */
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.METHOD)

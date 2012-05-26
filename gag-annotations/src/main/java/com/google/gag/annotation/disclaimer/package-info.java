@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +15,9 @@
  */
 
 /**
+ * <h1>Disclaimer Annotations</h1>
  * Annotations that help with disclosing facts about your code.
+ * Disclaimer annotations allow you to disclose certain relevant facts about your code.
+ * If you want to ease your conscience with full transparency, then consider these annotations.
  */
 package com.google.gag.annotation.disclaimer;

@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +15,10 @@
  */
 
 /**
+ * <h1>Literary Annotations</h1>
  * Annotations to help express yourself literarily.
+ * These speak for themselves… so to speak.
+ * Don't let another haiku or oxymoron go by again without slapping on one of these bad boys.
+ * You'll forever be revered for your code style and your code <em>style</em>.
  */
 package com.google.gag.annotation.literary;

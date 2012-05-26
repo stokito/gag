@@ -28,6 +28,16 @@ import com.google.gag.enumeration.CO2Units;
 /**
  * Estimates the primary carbon footprint the annotated code is expected to
  * incur during execution.
+ * <p/>
+ * For environmentally conscious developers, this annotation allows you to specify your primary carbon footprint incurred during normal execution of your code.
+ * Valid units are expressed with {@link CO2Units}.
+ * <pre>
+ * #&064;CarbonFootprint(
+ *  value = 6.28318531,
+ *  units = GRAMS_PER_MEGAJOULE)
+ * public interface Holodeck {
+ * }
+ * </pre>
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

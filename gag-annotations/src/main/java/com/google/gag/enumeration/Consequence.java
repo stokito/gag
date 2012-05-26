@@ -23,7 +23,7 @@ import com.google.gag.annotation.team.Visionary;
  */
 @Visionary("Paul Cowan")
 public enum Consequence {
-	ICE_COLD_STARE,
+  ICE_COLD_STARE,
   PAPER_CUT,
   SILENT_TREATMENT,
   VOGON_POETRY_RECITAL

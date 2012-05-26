@@ -19,6 +19,16 @@ package com.google.gag.annotation.disclaimer;
 /**
  * Discloses the number of animals were harmed during the making of the
  * annotated code.
+ * <p>
+ * The @AnimalsHarmedDuringTheMaking annotation allows you to disclose the mistreatment that befell any animals during the implementation of your code.
+ * <pre>
+ * &#064;AnimalsHarmedDuringTheMaking(
+ *  number = 1,
+ *  animal = "hamster",
+ *  disclosure = "didn't feed Fermie for 2 days to finish this on time")
+ * public class ConstantTimePrimalityTest {
+ * }
+ * </pre>
  */
 public @interface AnimalsHarmedDuringTheMaking {
   int number();

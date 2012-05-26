@@ -21,6 +21,9 @@ import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * @see LOL
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited

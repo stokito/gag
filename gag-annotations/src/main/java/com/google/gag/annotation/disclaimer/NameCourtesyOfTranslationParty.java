@@ -24,6 +24,14 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * Indicates that the questionable name of the annotated class, method,
  * variable is due to having the original name run through Translation Party.
+ * <p/>
+ * Sometimes it's tough to name a class, method or variable. We've all been there.
+ * If you've ever resorted to using Translation Party like we have, then you can use this annotation to give credit where it's due.
+ * And if you've ever had the misfortune of botching up a name all on your own, then, sure, use this annotation anyway.
+ * <pre>
+ * &#064;NameCourtesyOfTranslationParty
+ * void purizupurizuPleaseReferToTheFollowingElementsAggregateCan();
+ * </pre>
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

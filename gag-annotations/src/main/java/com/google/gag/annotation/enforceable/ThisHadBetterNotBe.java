@@ -25,6 +25,17 @@ import com.google.gag.enumeration.Property;
 
 /**
  * Enforces that the annotated parameter does not have the specified property.
+ * <p/>
+ * {@link ThisHadBetterBe} and {@link ThisHadBetterNotBe}
+ * <p/>
+ * These annotations are useful to ensure that your method parameters are what you expect them to be, dagnabbit.
+ * If you want a succinct alternatively to bulletproofing your parameters with preconditions, use these.
+ * <pre>
+ * public void setBonusMultiplier(@ThisHadBetterNotBe(NEGATIVE) double multiplier) {
+ *     this.multiplier = multiplier;
+ * }
+ * </pre>
+ * @see ThisHadBetterBe
  */
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.PARAMETER)

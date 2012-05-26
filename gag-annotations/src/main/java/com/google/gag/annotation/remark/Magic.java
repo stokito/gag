@@ -23,6 +23,20 @@ import java.lang.annotation.RetentionPolicy;
 
 import com.google.gag.enumeration.MagicType;
 
+/**
+ * Stumble across code that somehow works beyond all reason?
+ * Life's short. Mark it with {@code @Magic} and move on:
+ * <pre>
+ * &#064;Magic
+ * public static int negate(int n) {
+ *     return new Byte((byte) 0xFF).hashCode()
+ *     / (int) (short) '\uFFFF' * ~0
+ *     * Character.digit ('0', 0) * n
+ *     * (Integer.MAX_VALUE * 2 + 1)
+ *     / (Byte.MIN_VALUE >> 7) * (~1 | 1);
+ * }
+ * </pre>
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited

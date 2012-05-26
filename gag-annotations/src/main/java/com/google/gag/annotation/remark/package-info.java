@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +15,11 @@
  */
 
 /**
- * Annotations to praise your own code and smirk at others'.
+ * <h1>Remark Annotations</h1>
+ * Comments in Javadocs — who reads them? Annotations are so fashion-forward.
+ * Nothing catches attention like a good {@link OhSnap} or {@link FTW}.
+ * Doing a code review? You can mix and match Remark annotations to effect a healthy smack down.
+ * <p/>
+ * Annotations to praise your own code and smirk at others.
  */
 package com.google.gag.annotation.remark;

@@ -19,6 +19,12 @@ package com.google.gag.annotation.literary;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * <pre>
+ * &#064;Alliteration
+ * Peck pickledPeppers = peterPiper.pick();
+ * </pre>
+ */
 @Retention(RetentionPolicy.SOURCE)
 public @interface Alliteration {
 }

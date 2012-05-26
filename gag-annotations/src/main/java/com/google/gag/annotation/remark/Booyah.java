@@ -20,6 +20,9 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * @see LOL
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Booyah {

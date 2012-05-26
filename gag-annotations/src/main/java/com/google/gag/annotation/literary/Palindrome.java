@@ -19,6 +19,12 @@ package com.google.gag.annotation.literary;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * <pre>
+ * &#064;Palindrome
+ * Event e = gala.get(n, EVE);
+ * </pre>
+ */
 @Retention(RetentionPolicy.SOURCE)
 public @interface Palindrome {
 }

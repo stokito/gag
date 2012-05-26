@@ -24,6 +24,10 @@ import com.google.gag.enumeration.Measure;
 
 /**
  * Indicates that the annotated code follows the specified poetic meter.
+ * <pre>
+ * &#064;Meter(TROCHAIC)
+ * public abstract double axisOffset();
+ * </pre>
  */
 @Retention(RetentionPolicy.SOURCE)
 public @interface Meter {

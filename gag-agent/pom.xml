@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>gag</artifactId>
         <groupId>com.google</groupId>
-        <version>1.1-SNAPSHOT</version>
+        <artifactId>gag</artifactId>
+        <version>1.0.2</version>
     </parent>
 
     <artifactId>gag-agent</artifactId>
@@ -49,7 +49,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <forkMode>pertest</forkMode>
-                    <argLine>-javaagent:${project.build.directory}/${project.build.finalName}.${project.packaging}</argLine>
+                    <argLine>-javaagent:${project.build.directory}\${project.build.finalName}.${project.packaging}</argLine>
                     <workingDirectory>${project.build.directory}</workingDirectory>
                 </configuration>
             </plugin>

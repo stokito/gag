@@ -16,7 +16,7 @@
 
     <groupId>com.google</groupId>
     <artifactId>gag</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <build>
@@ -36,8 +36,6 @@
                     <source>${jdk}</source>
                     <target>${jdk}</target>
                     <compilerVersion>${jdk}</compilerVersion>
-                    <!-- Disable annotation processors during normal compilation -->
-                    <!--<compilerArgument>-proc:none</compilerArgument>-->
                 </configuration>
             </plugin>
         </plugins>

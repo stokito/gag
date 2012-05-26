@@ -26,6 +26,14 @@ import com.google.gag.enumeration.RegionType;
 /**
  * Discloses the best-guess number of regions that the annotated code might
  * be illegal in.
+ * <p/>
+ * Not certain whether your code is actually legal in a given region? Better to be safe than sorry.
+ * It's probably a good idea to slap one of these on your code.
+ * Valid regions are in {@link RegionType}.
+ * <pre>
+ * &#064;ProbablyIllegalIn(number = 17, region = STATES)
+ * public Money extractFractionalPennies(Account account);
+ * </pre>
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

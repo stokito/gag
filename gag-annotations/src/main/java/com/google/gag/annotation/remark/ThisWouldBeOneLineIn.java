@@ -19,6 +19,21 @@ package com.google.gag.annotation.remark;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * Java is a verbose language. Sometimes you're stuck using it. Sometimes you want to express your frustration. Sure:
+ * <pre>
+ * &#064;ThisWouldBeOneLineIn(
+ *     language = "haskell"
+ *     toWit = "product [1..n]")
+ * public int factorial(int n) {
+ *     int fac = 1;
+ *     for (int i = 1; i <= n; i++) {
+ *         fac *= i;
+ *     }
+ *     return fac;
+ * }
+ * </pre>
+ */
 @Retention(RetentionPolicy.SOURCE)
 public @interface ThisWouldBeOneLineIn {
   String language();

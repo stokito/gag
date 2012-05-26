@@ -26,6 +26,23 @@ import java.lang.annotation.Target;
  * become noop. Void methods do nothing; methods returning primitive numeric
  * values return the equivalent of 0; methods returning boolean return false;
  * methods returning objects return null.
+ * <p/>
+ * Feel like turning off a method? How about a whole class? Why waste time using a bunch of // and /* * /.
+ * Use a {@code @Noop} and, boom, no more behavior.
+ * <pre>
+ * public class FluxCapacitor {
+ *
+ *     &#064;Noop("let's see how long before Emmett realizes he's not travelling in time")
+ *     public void setDate(Date date) {
+ *         this.date = date;
+ *     }
+ *
+ *     public void setSpeed(int speed) {
+ *         this.speed = speed;
+ *     }
+ *
+ * }
+ * </pre>
  */
 @Retention(RetentionPolicy.CLASS)
 @Target({

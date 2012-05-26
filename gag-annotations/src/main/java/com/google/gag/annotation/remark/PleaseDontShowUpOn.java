@@ -21,6 +21,9 @@ import java.lang.annotation.RetentionPolicy;
 
 import com.google.gag.enumeration.Website;
 
+/**
+ * @see Hack
+ */
 @Retention(RetentionPolicy.SOURCE)
 public @interface PleaseDontShowUpOn {
   Website[] value();

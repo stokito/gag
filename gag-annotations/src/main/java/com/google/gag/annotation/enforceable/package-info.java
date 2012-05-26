@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +15,9 @@
  */
 
 /**
+ * <h1>Enforceable Annotations</h1>
  * Annotations that are enforceable by the GagTransformer agent.
+ * Enforceable Annotations are annotations enforced by dynamic bytecode instrumentation.
+ * Use the following annotations, then run your applications with the <code>javaagent:gag-agent.jar</code> option (see the <code>README</code> for details), and, voila, your annotations get enforced at runtime.
  */
 package com.google.gag.annotation.enforceable;

@@ -23,7 +23,7 @@ import com.google.gag.annotation.team.Visionary;
  */
 @Visionary("Mike Samuel")
 public enum ChannelingEntity {
-	ALTERNATE_REALITY_SELF,
+  ALTERNATE_REALITY_SELF,
   ARMY_OF_NANOBOTS,
   FUTURE_SELF,
   EX_HUMAN,
