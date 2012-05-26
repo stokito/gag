@@ -87,7 +87,7 @@
                     <archive>
                         <index>true</index>
                         <manifestEntries>
-                            <Main-Class>com.google.gag.demo.RunDemo</Main-Class>
+                            <Main-Class>com.github.stokito.gag.demo.RunDemo</Main-Class>
                         </manifestEntries>
                     </archive>
                 </configuration>

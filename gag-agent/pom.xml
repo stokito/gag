@@ -104,8 +104,8 @@
                     <archive>
                         <index>true</index>
                         <manifestEntries>
-                            <Premain-Class>com.google.gag.agent.GagTransformer</Premain-Class>
-                            <Agent-Class>com.google.gag.agent.GagTransformer</Agent-Class>
+                            <Premain-Class>com.github.stokito.gag.agent.GagTransformer</Premain-Class>
+                            <Agent-Class>com.github.stokito.gag.agent.GagTransformer</Agent-Class>
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>
