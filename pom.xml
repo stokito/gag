@@ -3,6 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.google</groupId>
+    <artifactId>gag</artifactId>
+    <version>1.0.2</version>
+    <packaging>pom</packaging>
+
     <modules>
         <module>gag-annotations</module>
         <module>gag-agent</module>
@@ -13,11 +19,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk>1.6</jdk>
     </properties>
-
-    <groupId>com.google</groupId>
-    <artifactId>gag</artifactId>
-    <version>1.0.2</version>
-    <packaging>pom</packaging>
 
     <build>
         <plugins>

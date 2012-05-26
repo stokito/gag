@@ -49,7 +49,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <forkMode>pertest</forkMode>
-                    <argLine>-javaagent:${project.build.directory}\${project.build.finalName}.${project.packaging}</argLine>
+                    <argLine>-javaagent:${project.build.directory}${file.separator}${project.build.finalName}.${project.packaging}</argLine>
                     <workingDirectory>${project.build.directory}</workingDirectory>
                 </configuration>
             </plugin>
