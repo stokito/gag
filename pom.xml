@@ -7,7 +7,7 @@
     <artifactId>gag</artifactId>
     <version>1.0.2</version>
     <packaging>pom</packaging>
-    <name>Google Annotations Gallery</name>
+    <name>Google Annotations Gallery parent</name>
     <description>The Google Annotations Gallery is an exciting new Java open source library that provides a rich set of annotations for developers to express themselves. Do you find the standard Java annotations dry and lackluster? Have you ever resorted to leaving messages to fellow developers with the @Deprecated annotation? Wouldn't you rather leave a @LOL or @Facepalm instead? If so, then this is the gallery for you.</description>
     <inceptionYear>2010</inceptionYear>
     <url>http://code.google.com/p/gag/</url>
@@ -46,6 +46,9 @@
         <developerConnection>scm:git:git@github.com:stokito/gag.git</developerConnection>
         <url>https://github.com/stokito/gag/</url>
     </scm>
+    <issueManagement>
+        <url>https://github.com/stokito/gag/issues</url>
+    </issueManagement>
     <modules>
         <module>gag-annotations</module>
         <module>gag-agent</module>

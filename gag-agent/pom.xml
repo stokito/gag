@@ -52,6 +52,9 @@
         <developerConnection>scm:git:git@github.com:stokito/gag.git</developerConnection>
         <url>https://github.com/stokito/gag/</url>
     </scm>
+    <issueManagement>
+        <url>https://github.com/stokito/gag/issues</url>
+    </issueManagement>
     <dependencies>
         <dependency>
             <groupId>com.google</groupId>
