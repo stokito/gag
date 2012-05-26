@@ -1,5 +1,9 @@
 # Compiled source
 *.class
+# Package Files #
+*.jar
+*.war
+*.ear
 # Log files
 *.log
 
