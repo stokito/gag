@@ -28,7 +28,7 @@ import com.google.gag.annotation.team.Visionary;
  * 
  * <pre>
  *   &#064;OhNoYouDidnt(fingerSnapCount = 2)
- *   public void sortInLinearTime(List<?> list) {
+ *   public void sortInLinearTime(List&lt;?&gt; list) {
  * </pre>
  */
 @Documented
