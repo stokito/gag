@@ -23,3 +23,5 @@ option; and put the agent-dependent jars in your classpath, like:
     -cp asm-3.1.jar:asm-commons-3.1.jar:google-collect-1.0.jar:gag.jar \
     MyAnnotatedClass
 
+
+This project is fork of GAG. Currently it has identical code with original GAG, but it will growth with new features in next release.
