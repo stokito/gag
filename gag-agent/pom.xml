@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.github.stokito</groupId>
             <artifactId>gag-annotations</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>asm</groupId>
