@@ -11,7 +11,7 @@
 
     <groupId>com.github.stokito</groupId>
     <artifactId>gag</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Google Annotations Gallery parent</name>
     <description>
