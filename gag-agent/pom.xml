@@ -6,56 +6,16 @@
     <parent>
         <groupId>com.github.stokito</groupId>
         <artifactId>gag</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
     <artifactId>gag-agent</artifactId>
     <packaging>jar</packaging>
     <name>Google Annotations Gallery agent</name>
     <description>
-        The Google Annotations Gallery is an exciting new Java open source library that provides a rich set of annotations for developers to express themselves. Do you find the standard Java annotations dry and lackluster? Have you ever resorted to leaving messages to fellow developers with the @Deprecated annotation? Wouldn't you rather leave a @LOL or @Facepalm instead? If so, then this is the gallery for you.
-        Dynamic bytecode instrumentation Java agent.
+        Dynamic bytecode instrumentation Java agent for GAG.
+        GAG is an annotations library that provides a rich set of annotations for developers to express themselves.
     </description>
-    <inceptionYear>2012</inceptionYear>
-    <url>https://github.com/stokito/gag</url>
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <name>Leo Deegan</name>
-            <email>leodeegan@google.com</email>
-            <roles>
-                <role>contributor</role>
-            </roles>
-        </developer>
-        <developer>
-            <name>Andrew Griffiths</name>
-            <email>andrew.john.griffiths@gmail.com</email>
-            <roles>
-                <role>contributor</role>
-            </roles>
-        </developer>
-        <developer>
-            <name>Sergey Ponomarev</name>
-            <email>stokito@gmail.com</email>
-            <roles>
-                <role>maintainer</role>
-                <role>owner</role>
-            </roles>
-        </developer>
-    </developers>
-    <scm>
-        <connection>scm:git:git://github.com/stokito/gag.git</connection>
-        <developerConnection>scm:git:git@github.com:stokito/gag.git</developerConnection>
-        <url>https://github.com/stokito/gag/</url>
-    </scm>
-    <issueManagement>
-        <url>https://github.com/stokito/gag/issues</url>
-    </issueManagement>
+
     <dependencies>
         <dependency>
             <groupId>com.github.stokito</groupId>
@@ -73,9 +33,9 @@
             <version>3.1</version>
         </dependency>
         <dependency>
-            <groupId>com.google.collections</groupId>
-            <artifactId>google-collections</artifactId>
-            <version>1.0</version>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>10.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
