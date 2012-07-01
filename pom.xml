@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -11,13 +9,13 @@
 
     <groupId>com.github.stokito</groupId>
     <artifactId>gag</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
     <name>Google Annotations Gallery parent</name>
     <description>
         An annotations library that provides a rich set of annotations for developers to express themselves.
         Do you find the standard Java annotations dry and lackluster?
-        Have you ever resorted to leaving messages to fellow developers with the &#64;Deprecated annotation? Wouldn't you rather leave a &#64;LOL or &#64;Facepalm instead?
+        Have you ever resorted to leaving messages to fellow developers with the @Deprecated annotation? Wouldn't you rather leave a @LOL or @Facepalm instead?
         If so, then this is the gallery for you.
     </description>
     <inceptionYear>2010</inceptionYear>
