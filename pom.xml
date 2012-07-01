@@ -54,7 +54,6 @@
     <modules>
         <module>gag-annotations</module>
         <module>gag-agent</module>
-        <module>gag-demo</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
