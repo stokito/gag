@@ -23,5 +23,33 @@ option; and put the agent-dependent jars in your classpath, like:
     -cp asm-3.1.jar:asm-commons-3.1.jar:google-collect-1.0.jar:gag.jar \
     MyAnnotatedClass
 
-
+# About this fork
 This project is fork of GAG. Currently it has identical code with original GAG, but it will growth with new features in next release.
+You can read my article about in russian http://stokito.wordpress.com/2012/07/02/gag
+
+GAG is already loaded to Maven Central
+
+<dependency>
+  <groupId>com.google.gag</groupId>
+  <artifactId>gag</artifactId>
+  <version>1.0.1</version>
+</dependency>
+
+<dependency>
+  <groupId>com.google.gag</groupId>
+  <artifactId>gag-agent</artifactId>
+  <version>1.0.1</version>
+</dependency>
+
+But it is not mavenized yet instead of this fork.
+Now, GAG builded by Maven, thats a helps to resolve transitive dependencies.
+This version also is uploaded to Maven Central, here is dependency:
+        <dependency>
+            <groupId>com.github.stokito</groupId>
+            <artifactId>gag-annotations</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+Take a look on demo application https://github.com/stokito/gag-demo
+
+Everybody are wellcome to fork me ;)
