@@ -1,0 +1,6 @@
+language: groovy
+
+jdk:
+  - openjdk7
+
+script: ./grailsw clean; ./grailsw "test-app -unit -integration"
