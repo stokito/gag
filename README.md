@@ -1,4 +1,6 @@
 # Google Annotations Gallery
+[![Build Status](https://travis-ci.org/stokito/gag.png?branch=master)](https://travis-ci.org/stokito/gag)
+
 The Google Annotations Gallery is an exciting new Java open source library that provides a rich set of annotations for developers to express themselves. Do you find the standard Java annotations dry and lackluster? Have you ever resorted to leaving messages to fellow developers with the `@Deprecated` annotation? Wouldn't you rather leave a `@LOL` or `@Facepalm` instead? If so, then this is the gallery for you.
 
 Not only can you leave expressive remarks in your code, you can use these annotations to draw attention to your poetic endeavors. How many times have you written a palindromic or synecdochal line of code and wished you could annotate it for future readers to admire? Look no further than `@Palindrome` and `@Synecdoche`.
