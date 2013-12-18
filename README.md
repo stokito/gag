@@ -18,7 +18,7 @@ To use the annotations, simply annotate your code with them and include
 
 To use the Java agent: use at least JDK 5; use the `-javaagent:gag-agent.jar`
 option; and put the agent-dependent jars in your classpath, like:
-```
+```sh
 java -javaagent:gag-agent.jar \
     -cp asm-3.1.jar:asm-commons-3.1.jar:google-collect-1.0.jar:gag.jar \
     MyAnnotatedClass
