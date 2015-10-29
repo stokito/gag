@@ -56,3 +56,9 @@ This version also is uploaded to Maven Central, here is dependency:
 Take a look on demo application https://github.com/stokito/gag-demo
 
 Everybody are wellcome to fork me ;)
+
+
+## See also
+* [The honest Java library](https://github.com/stalehd/honestlib)
+* [JPatterns](https://github.com/stokito/jpatterns) a collection of annotations for Design Patterns
+* [immutablej](https://github.com/samskivert/immutablej)
